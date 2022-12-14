@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./src/styles/signup.css">
+</head>
+<body>
+    <div class="container">
+        <!-- left div -->
+        <div id="left">
+            <img id="sliderImage" src="https://www.1mg.com/images/login-signup/Your-Go-To-Health-App.png" alt="">
+            <h3 id="sliderHeading">Go To Health App</h3>
+            <p id="sliderPara">Get medicine information, order medicines, book lab tests and consult doctors online from the comfort of your home.</p>
+        </div>
+        <!-- right div -->
+        <div id="right">
+            <h2 id="head">Sign Up</h2>
+            <p id="para"> Hey user, Please enter your Username and Password</p>
+            <form id="signupForm">
+                <input type="text" id="mobile" placeholder="Enter mobile number" required><br>
+                <input type="text" id="username" placeholder="Enter a username" required><br>
+                <input type="password" id="password" placeholder="Create a password" required><br>
+                <input type="checkbox" id="tick" >
+                <label for="tick">Are you a healthcare professional?</label><br>
+                <input type="submit" id="signupBtn" value="SIGN UP">
+            </form>
+            <p id="already">Have an account?<a href="login.html"> Login</a></p>
+            <p id="policy">By signing up, you agree to our
+                Terms and Conditions & Privacy Policy</p>
+        </div>
+    </div>
+<script src="./src/scripts/signup.js"></script>
+</body>
+</html>
