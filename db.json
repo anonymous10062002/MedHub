@@ -1,0 +1,91 @@
+{
+  "omega_and_fish_oil": [
+    {
+      "createdAt": "createdAt 1",
+      "name": "Tata 1mg Salmon Omega 3 Fish Oil Capsule",
+      "image": "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/fwram2p7rbkoigjg6zas.jpg",
+      "price": "448",
+      "description": "bottle of 60 capsule",
+      "id": "1"
+    },
+    {
+      "createdAt": "createdAt 1",
+      "name": "Dr. Morepen Omega 3 Triple Strength 1250mg Deep Sea Fish Oil with DHA & EPA 900mg Softgel",
+      "image": "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/e5722339955b423b9e5cdaa70b9f43f9.jpg",
+      "price": "605",
+      "description": "bottle of 60 soft gelatin capsule",
+      "id": "2"
+    },
+    {
+      "createdAt": "createdAt 1",
+      "name": "name 1",
+      "image": "image",
+      "price": "price",
+      "description": "des",
+      "id": "3"
+    },
+    {
+      "createdAt": "createdAt 1",
+      "name": "name 1",
+      "image": "image",
+      "price": "price",
+      "description": "des",
+      "id": "4"
+    },
+    {
+      "createdAt": "createdAt 1",
+      "name": "name 1",
+      "image": "image",
+      "price": "price",
+      "description": "des",
+      "id": "5"
+    },
+    {
+      "createdAt": "createdAt 1",
+      "name": "name 1",
+      "image": "image",
+      "price": "price",
+      "description": "des",
+      "id": "6"
+    },
+    {
+      "createdAt": "createdAt 1",
+      "name": "name 1",
+      "image": "image",
+      "price": "price",
+      "description": "des",
+      "id": "7"
+    },
+    {
+      "createdAt": "createdAt 1",
+      "name": "name 1",
+      "image": "image",
+      "price": "price",
+      "description": "des",
+      "id": "8"
+    },
+    {
+      "createdAt": "createdAt 1",
+      "name": "name 1",
+      "image": "image",
+      "price": "price",
+      "description": "des",
+      "id": "9"
+    },
+    {
+      "createdAt": "createdAt 1",
+      "name": "name 1",
+      "image": "image",
+      "price": "price",
+      "description": "des",
+      "id": "10"
+    },
+    {
+      "id": "11",
+      "name": "sample1",
+      "image": "dfgh",
+      "price": "456",
+      "des": "dfghjk"
+    }
+  ]
+}
