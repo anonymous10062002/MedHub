@@ -1,4 +1,8 @@
 
+import { footerComp } from "../components/compFooter.js";
+let footer_div = document.getElementById('footer_div');
+footer_div.innerHTML = footerComp();
+
     let storedUsername=localStorage.getItem("username");
     let storedPassword=localStorage.getItem("password");
     document.getElementById("loginForm").addEventListener("submit",(event)=>{

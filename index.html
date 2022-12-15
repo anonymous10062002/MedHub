@@ -5,7 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MedHum-Medicals</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./src/styles/index.css">
+  
+    <link rel="stylesheet" href="./src/styles/nav.css">  <!-- CSS for Navber -->
+    <link rel="stylesheet" href="./src/styles/footer.css">
 </head>
 <body>
     <!-- Navbar Section -->
@@ -15,16 +20,35 @@
 
     <!-- Carousel Section -->
     <div id="carousel_div">
-        CAROUSEL_DIV
+        <!-- CAROUSEL_DIV -->
     </div>
 
-    <h2 style="color: rgb(104, 101, 101); text-align: center;">Tata 1mg: India’s Leading Online Pharmacy & Healthcare Platform</h2 style="color: gray;">
+    <h2 style="color: rgb(104, 101, 101); text-align: center;">Tata 1mg: India’s Leading Online Pharmacy & Healthcare Platform</h2>
 
     <div id="care_plan">
         <img src="https://onemg.gumlet.io/image/upload/v1647251796/ueyxzzku83yuvpqxyrwe.png" alt="">
     </div>
 
     <!-- <div id="animation"></div> -->
+    <div id="oil_div">
+        
+    </div>
+
+    <div id="card_list">
+        <div class="card">
+            <div class="card_img">
+                <img src="" alt="">
+            </div>
+            <div class="card_body">
+                <p class="card_name"></p>
+                <p class="serving"></p>
+                <p class="strikedOfPrice"></p>
+                <p class="price"></p>
+            </div>
+        </div>
+    </div>
+
+    <hr>
 
     <p class="category_tags">Shop by health concerns</p>
     <div class="category_div">
@@ -91,26 +115,17 @@
     <p class="category_tags">Omega & fish oil</p>
     
     <div class="dyn_category_div category_div">
-        <div class="img_div">
-            <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/fb60d28d-3bb1-4ada-bc1c-811a2c6a678b.png" alt="">
-        </div>
-        <div class="img_div">
-            <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/cf47760f-f087-4fa2-be20-7ea88f1ec36a.png" alt="">
-        </div>
-        <div class="img_div">
-            <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/be4ad283-2733-4781-858e-c87fa22e18b2.png" alt="">
-        </div>
-        <div class="img_div">
-            <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/c3c47e9d-4fe5-4580-907b-78d37dcba4eb.png" alt="">
-        </div>
-        <div class="img_div">
-            <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/960e16af-cae2-4dd4-ae61-44aa5096a672.png" alt="">
-        </div>
-        <div class="img_div">
-            <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/3dcf4b1d-0baf-4a11-909b-505f3524c222.webp" alt="">
-        </div>
-        <div class="img_div">
-            <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/fa7ff8e9-f1f8-4a3e-9125-c9b36bcf38cd.png" alt="">
+        
+        <div class="card">
+            <div class="card_img">
+                <img src="https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/fwram2p7rbkoigjg6zas.jpg" alt="">
+            </div>
+            <div class="card_body">
+                <p class="card_name">Tata 1mg Salmon Omega 3 Fish Oil Capsule</p>
+                <p class="serving">bottle of 60 cpsules</p>
+                <p class="strikedOfPrice"></p>
+                <p class="price">₹448</p>
+            </div>
         </div>
 
         <button id="sliding_arr" style="position: absolute; right: 10px;">right</button>
@@ -191,16 +206,11 @@
             
             Now, isn't that easy? Why go all the way to the medicine store and wait in line, when you have Tata 1mg Pharmacy at your service.</p>
     </div>
+
+    <div id="footer_div"></div>
     
 
 </body>
 </html>
-<script>
-    let sliding_arr = document.getElementById('sliding_arr');
-    sliding_arr.addEventListener('click', ()=> {
-        let category_div = document.getElementById('sliding_arr');
-        category_div.style.backgroundColor = 'red'
-        console.log(category_div)
-    })
-
-</script>
+<script type="module" src="./src/scripts/index.js"></script>
+<script type="module" src="./src/scripts/nav.js"></script>
