@@ -1653,7 +1653,12 @@
     "image": "https://onemg.gumlet.io/a_ignore,w_450,h_260,c_fit,q_auto,f_auto/qie2mezdy3kzdmvvtwra.jpg",
     "description": "Joint pain is a perception of pain or discomfort in the joints. While pain in the joints is a common occurrence with age, other factors like weight, previous injuries, overuse and underlying systemic medical conditions can also cause it. Joint pain is mostly associated with major joints like knee, hip, ankle or wrist but involvement of small joints is also seen in case of systemic disorders like rheumatoid arthritis, psoriasis etc. Of the various types of joint pain, osteoarthritis is the most commonly seen joint problem. It is estimated that 9.6% of men and 18% of women above 60 years of age have symptomatic osteoarthritis. This condition is associated with degenerative changes of the joint and most commonly affects the knees, hips, spine and hands. To know the exact cause of the joint pain, your doctor may advise various radiological and laboratory tests. In most cases, joint pain is treated with medications such as painkillers to provide symptomatic relief or with medications that treat the underlying cause of pain. In a few cases, surgery is also recommended. Other therapies such as exercise, yoga, and physiotherapy are also known to be useful in reducing joint pain.",
     "id": "70"
-    }
+    },{
+      "name": "Keratitis",
+      "image": "https://onemg.gumlet.io/a_ignore,w_450,h_260,c_fit,q_auto,f_auto/ivmp7lhuostfx309cpin.png",
+      "description": "Keratitis is the inflammation of the cornea which is the clear outer layer of the eye that focuses light. The severity of keratitis may range from mild to severe and can be associated with inflammation of other regions of the eye as well. It may also involve one eye (unilateral) or both eyes (bilateral).Keratitis is caused by either infectious agents or non-infectious causes. Infectious diseases are mainly caused by microbes like bacteria, fungi, viruses, and parasites. The noninfectious keratitis is majorly caused by local factors irritating the eye, or other systemic diseases affecting the eye. Some of the common symptoms of keratitis are eye irritation and pain, eye discharge, sensitivity to light, blurred vision or partial blindness, and red eyes.Keratitis is typically easy to treat and resolves quickly. However, if the infection spreads beyond the surface of your cornea, it may leave scars that impair your eyesight or possibly cause loss of vision. Thus, appropriate and timely management is very important. ",
+      "id": "71"
+     }
   ],
   "cartItem":[]
 }
