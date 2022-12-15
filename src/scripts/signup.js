@@ -1,14 +1,38 @@
 
+    let baseURL=`http://localhost:3000/`;
+    let postUserURL=`${baseURL}users`;
     let form=document.getElementById("signupForm");
     form.addEventListener("submit",saveCredentials);
     function saveCredentials(event){
         event.preventDefault();
         let userName=document.getElementById("username").value;
         let passWord=document.getElementById("password").value;
-        localStorage.setItem("username",userName);
-        localStorage.setItem("password",passWord);
-        window.location.assign("login.html");
+        let mobileNum= document.getElementById("mobile").value;
+        let userObj={
+            username:userName,
+            password:passWord,
+            mobile:mobileNum
+        }
+        funcPost(userObj);
+        // window.location.assign("login.html");
     }
+    async function funcPost(userObj){
+        try {
+            let req= await fetch(postUserURL,{
+                method:"POST",
+                headers:{
+                    "Content-Type":"application/json"
+                },
+                body:JSON.stringify(userObj)
+            })
+            if(req.ok){
+                alert("User registered successfully!");
+            }
+        } catch (error) {
+            console.log(error)
+        }
+    }
+// SLIDER FUNCTION //
     function first(){
         document.getElementById("sliderImage").src="https://www.1mg.com/images/login-signup/Home-Delivery-of-Medicines.png"
         document.getElementById("sliderHeading").innerText= "Medicines, Home Delivered"
@@ -27,3 +51,4 @@
     setInterval(first,3000);
     setInterval(second,6000);
     setInterval(third,9000);
+    
