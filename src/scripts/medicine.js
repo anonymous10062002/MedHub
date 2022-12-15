@@ -43,7 +43,8 @@ function getData(data) {
   for (let addBtn of addBtns) {
     addBtn.addEventListener("click", (event) => {
       let id = event.target.dataset.id;
-      console.log(id);
+      sendToCartPage(id)
+      // console.log(id)
     });
   }
 }
@@ -101,4 +102,24 @@ function getAsBtn(text, cls, dataId) {
   return `<button class="${cls}" ${
     dataId ? `data-id = ${dataId}` : ""
   }> ${text} </button>`;
+}
+
+// ----- Send to Cart Page -----
+
+async function sendToCartPage(id){
+  try{
+    let fetchCartData = await fetch(`${baseURL}/${id}`)
+    let data = await fetchCartData.json()
+    setLocalStorge(data)
+  }
+  catch(err){
+    console.log(err)
+  }
+}
+
+var LSarray = [];
+function setLocalStorge(data){
+  LSarray.push(data)
+  localStorage.setItem("LSarray", JSON.stringify(LSarray))
+  // console.log(LSarray)
 }
