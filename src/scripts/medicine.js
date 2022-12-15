@@ -1,4 +1,10 @@
+import { compNav } from "../components/compNav.js";
+let navbar_div = document.getElementById('navbar_div');
+navbar_div.innerHTML = compNav();
 
+import { footerComp } from "../components/compFooter.js";
+let footer_div = document.getElementById('footer_div');
+footer_div.innerHTML = footerComp();
 
 let baseURL = "https://636f5f3cbb9cf402c8162143.mockapi.io/medicine";
 
