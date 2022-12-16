@@ -1,0 +1,127 @@
+*{
+    font-family: sans-serif;
+}
+#wrapper{
+    background-color: #f6f6f6 ;
+    display: flex;
+    border: 1px solid;
+    padding: 0 2vw;
+    column-gap: 2vw;
+    
+}
+#sorting_categories{
+    border: 1px solid;
+    flex: 1.5;
+    background-color: white;
+}
+#main_body{
+    /* border: 1px solid; */
+    flex: 8.5;
+}
+#banners img{
+    width: 100%;
+    margin-bottom: 1vh;
+}
+
+#sub_heading_and_sort{
+    display: flex;
+    padding: 0 4vw;
+    justify-content: space-between;
+    padding: 2vh 0;
+}
+#sort{
+    display: flex;
+    align-items: center;
+    column-gap: 1vw;
+}
+select{
+    height: 4vh;
+    width: 15vw;
+}
+
+/* CSS for Dynamic data starts */
+/* Dynamic Data styling */
+
+.card_list_wrapper{
+    /* padding: 0 2vw; */
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+    /* border: 1px solid; */
+}
+
+.card_list{
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 52vh);
+    gap: 2vw;
+    margin-bottom: 50px;
+}
+.card{
+    /* border: 1px solid; */
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 0vh 1vw;
+}
+.card:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 6px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    cursor: pointer;
+}
+.card_img_div{
+    /* border: 1px solid; */
+    margin-bottom: 2vh;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card_body{
+    /* border: 1px solid; */
+    line-height: 1vh;
+}
+.card_name{
+    font-size: 15px;
+    line-height: 3vh;
+}
+.card img{
+    max-height: 80%;
+    max-width: 80%;
+}
+.pack_size{
+    color: gray;
+}
+.striked_price{
+    font-size: 12px;
+    color: gray;
+}
+.price_and_add_button{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.add_button{
+    height: 4vh;
+}
+.price{
+    font-size: 20px;
+    color: green;
+}
+
+/* Responsiveness */
+
+@media screen and (max-width:900px) {
+    .card_list{
+        /* border: 1px solid red; */
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 52vh);
+    }
+}
+
+@media screen and (max-width:700px) {
+    .card_list{
+        /* border: 1px solid red; */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 52vh);
+    }
+}

@@ -1,5 +1,24 @@
-let opennav = () => {
+let resorces = document.getElementById('resorces');
+let vitamins = document.getElementById('vitamins');
+let diabetes = document.getElementById('diabetes');
+let healthcare = document.getElementById('healthcare');
+let personal = document.getElementById('personal');
+let health = document.getElementById('health');
+let ayurveda = document.getElementById('ayurveda');
+let homeopathy = document.getElementById('homeopathy');
 
+
+resorces.addEventListener('click', opennav);
+vitamins.addEventListener('click', opennav1);
+diabetes.addEventListener('click', opennav2);
+healthcare.addEventListener('click', opennav3);
+personal.addEventListener('click', opennav4);
+health.addEventListener('click', opennav5);
+ayurveda.addEventListener('click', opennav6);
+homeopathy.addEventListener('click', opennav7);
+
+
+function opennav() {
     if (document.querySelector(".dropDown").style.height == false || document.querySelector(".dropDown").style.height == "0px") {
         document.querySelector(".dropDown").style.height = "200px";
         document.querySelector(".menu").style.color = "blue";
@@ -10,7 +29,7 @@ let opennav = () => {
     }
 
 }
-let opennav1 = () => {
+function opennav1() {
 
     if (document.querySelector(".vitamin").style.height == false || document.querySelector(".vitamin").style.height == "0px") {
         document.querySelector(".vitamin").style.height = "350px";
@@ -21,7 +40,7 @@ let opennav1 = () => {
         document.querySelector(".vitamin1").style.color = "black";
     }
 }
-let opennav2 = () => {
+function opennav2() {
 
     if (document.querySelector(".diabetes").style.height == false || document.querySelector(".diabetes").style.height == "0px") {
         document.querySelector(".diabetes").style.height = "350px";
@@ -32,7 +51,7 @@ let opennav2 = () => {
         document.querySelector(".diabetes1").style.color = "black";
     }
 }
-let opennav3 = () => {
+function opennav3() {
 
     if (document.querySelector(".Health").style.height == false || document.querySelector(".Health").style.height == "0px") {
         document.querySelector(".Health").style.height = "350px";
@@ -43,7 +62,7 @@ let opennav3 = () => {
         document.querySelector(".Health1").style.color = "black";
     }
 }
-let opennav4 = () => {
+function opennav4() {
 
     if (document.querySelector(".Personal").style.height == false || document.querySelector(".Personal").style.height == "0px") {
         document.querySelector(".Personal").style.height = "350px";
@@ -54,7 +73,7 @@ let opennav4 = () => {
         document.querySelector(".Personal1").style.color = "black";
     }
 }
-let opennav5 = () => {
+function opennav5() {
 
     if (document.querySelector(".HealthC ").style.height == false || document.querySelector(".HealthC ").style.height == "0px") {
         document.querySelector(".HealthC ").style.height = "350px";
@@ -65,7 +84,7 @@ let opennav5 = () => {
         document.querySelector(".HealthC1").style.color = "black";
     }
 }
-let opennav6 = () => {
+function opennav6() {
 
     if (document.querySelector(".Ayurveda ").style.height == false || document.querySelector(".Ayurveda ").style.height == "0px") {
         document.querySelector(".Ayurveda").style.height = "350px";
@@ -77,7 +96,7 @@ let opennav6 = () => {
         document.querySelector(".Ayurveda1").style.color = "black";
     }
 }
-let opennav7 = () => {
+function opennav7() {
 
     if (document.querySelector(".homopathy").style.height == false || document.querySelector(".homopathy").style.height == "0px") {
         document.querySelector(".homopathy").style.height = "350px";
