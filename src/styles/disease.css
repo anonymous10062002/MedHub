@@ -1,0 +1,64 @@
+.heading {
+    text-align: center;
+    color: blue;
+}
+
+#disease {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.disease {
+
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.disease h1 {
+    color: blue;
+}
+
+.intro {
+
+    padding: 10px;
+}
+
+.diseaseDescription {
+    background-color: rgb(240, 240, 240);
+    margin-left: 0px;
+    padding-right: 0px;
+    padding: 15px;
+}
+
+#pagination {
+    width: 90%;
+    height: 80px;
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#pagination .pageButton {
+    background: none;
+    border: none;
+    font-size: 20px;
+    margin: 2%;
+}
+
+#pagination .pageButton:hover {
+    color: rgb(106, 106, 197);
+}
+
+@media only screen and (max-width:600px) {
+    #disease {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #paagination {
+        height: 400px;
+        margin: auto;
+        text-align: center;
+    }
+}
