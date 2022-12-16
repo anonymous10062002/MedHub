@@ -26,11 +26,17 @@ body {
   padding: 10px;
 }
 .card_image img {
-  height: 20vh;
+  height: 150px;
   width: 10vw;
-  object-fit: cover;
+  /* object-fit: cover; */
+}
+.card_t{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 .card_btn {
+  width: 80px;
   border: 0px;
   border-radius: 7px;
   padding: 5px 15px;
@@ -38,6 +44,10 @@ body {
   font-family: "verdana", "sans-serif";
   font-size: 15px;
   color: #1c1c1c;
+}
+button:hover{
+  cursor: pointer;
+  /* background-color: aqua; */
 }
 
 /* pagination section */
