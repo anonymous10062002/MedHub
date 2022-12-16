@@ -1,9 +1,17 @@
-let getDataFromLS = JSON.parse(localStorage.getItem("LSarray"));
-
+async function getCartData(){
+  try {
+    let res = await fetch("http://localhost:3000/cartItem")
+    let cartData = await res.json()
+    getData(cartData)
+  } catch (error) {
+    
+  }
+}
+getCartData()
 // let x = getDataFromLS.map((item) => {
 
 // })
-getData(getDataFromLS)
+// getData(getDataFromLS)
 
 function getData(data) {
     document.getElementById("cart_div").innerHTML = `
