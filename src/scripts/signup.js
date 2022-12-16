@@ -14,7 +14,6 @@
             mobile:mobileNum
         }
         funcPost(userObj);
-        // window.location.assign("login.html");
     }
     async function funcPost(userObj){
         try {
@@ -26,7 +25,7 @@
                 body:JSON.stringify(userObj)
             })
             if(req.ok){
-                alert("User registered successfully!");
+                window.location.assign("login.html");
             }
         } catch (error) {
             console.log(error)

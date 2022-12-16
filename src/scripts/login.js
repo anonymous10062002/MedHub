@@ -3,21 +3,16 @@ import { footerComp } from "../components/compFooter.js";
 let footer_div = document.getElementById('footer_div');
 footer_div.innerHTML = footerComp();
 
-    let storedUsername=localStorage.getItem("username");
-    let storedPassword=localStorage.getItem("password");
+    // let storedUsername=localStorage.getItem("username");
+    // let storedPassword=localStorage.getItem("password");
     document.getElementById("loginForm").addEventListener("submit",(event)=>{
         event.preventDefault();
         let entName=document.getElementById("username").value;
         let entPass=document.getElementById("password").value;
         verify(entName,entPass);
     });
-    function verify(entName,entPass){
-        if(entName!==storedUsername||entPass!==storedPassword){
-            alert("Wrong username or Password!");
-        }
-        else if(entName===storedUsername&&entPass===storedPassword){
-            window.location.assign("index.html");
-        }
+    async function verify(entName,entPass){
+        
     }
     function first(){
         document.getElementById("sliderImage").src="https://www.1mg.com/images/login-signup/Home-Delivery-of-Medicines.png"
