@@ -45,6 +45,10 @@
 
 .img_div{
     background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    line-height: 5vh;
+    font-size: 13px;
 }
 .category_div div{
     /* border: 1px solid; */
