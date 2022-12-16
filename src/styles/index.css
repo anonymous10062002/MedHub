@@ -1,10 +1,13 @@
 *{
     margin: 0;
+    font-family: sans-serif;
+    /* background-color: #f6f6f6; */
 }
 
 #carousel_div{
     border: 1px solid black;
     margin-top: 20px;
+    display: flex;
     width: auto;
     height: 30vh;
     margin-bottom: 5vh;
@@ -24,11 +27,7 @@
     margin: auto;
 }
 
-.category_tags{
-    margin: 20px;
-    margin-top: 30px;
-}
-
+/* CSS for Hard coded data starts */
 .category_div{
     /* border: 1px solid; */
     height: 28vh;
@@ -59,22 +58,90 @@
 .img_div:hover{
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
+/* CSS for Hard coded data ends */
 
-.dyn_category_div{
+/* .dyn_category_div */
+
+h3{
+    font-size: 20px;
+    margin: 20px;
+}
+/* CSS for Dynami data starts */
+/* Dynamic Data styling */
+
+.card_list_wrapper{
+    padding: 0 2vw;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     /* border: 1px solid; */
-    height: 55vh;
+}
+
+.card_list{
+    /* border: 1px solid red; */
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    padding: 0 40px;
-    column-gap: 2px;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(1, 52vh);
+    margin-bottom: 50px;
+}
+.card{
+    border-radius: 10px;
+    padding: 2vh 1vw;
+}
+.card:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 6px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    cursor: pointer;
+}
+.card_img_div{
+    margin-bottom: 5vh;
+    height: 60%;
+    display: flex;
     align-items: center;
-    background-color: #fff;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    justify-content: center;
+}
+.card_body{
+    /* border: 1px solid; */
+    line-height: 3vh;
+}
+.card_name{
+    font-size: 15px;
+}
+.card img{
+    max-height: 100%;
+    max-width: 100%;
+}
+.pack_size{
+    color: gray;
+}
+.striked_price{
+    font-size: 12px;
+    color: gray;
+}
+.price_and_add_button{
+    /* border: 1px solid; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.add_button{
+    height: 3vh;
+}
+.price{
+    font-size: 20px;
+    color: green;
+}
+
+/* Medium Size Screens */
+
+@media screen and (max-width: 800px) {
+    .card_list{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 45vh);
+    }
 }
 
 /* lower body */
 #lower_body{
-    margin-top: 50px;
+    /* margin-top: 50px;
     height: 200px;
-    background-color: white;
+    background-color: white; */
 }
