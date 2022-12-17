@@ -1,3 +1,9 @@
+import config from "../../config.js";
+
+
+let baseURL = config.medicine;
+
+
 import { compNav } from "../components/compNav.js";
 let navbar_div = document.getElementById('navbar_div');
 navbar_div.innerHTML = compNav();
@@ -6,7 +12,7 @@ import { footerComp } from "../components/compFooter.js";
 let footer_div = document.getElementById('footer_div');
 footer_div.innerHTML = footerComp();
 
-let baseURL = "http://localhost:3000/medicines";
+
 
 async function fetchMedicineData(pageNumber = 1, dataParPage = 10) {
   try {
@@ -119,9 +125,10 @@ async function sendToCartPage(id){
   }
 }
 
+let cartURL = config.cartItem
 async function sendData(data){
   try{
-    let res = await fetch("http://localhost:3000/cartItem",{
+    let res = await fetch(cartURL,{
       method: "POST",
       headers:{
         "Content-Type" : "application/json"
