@@ -1,3 +1,7 @@
+import config from "../../config.js";
+let baseURL = config.cartItem;
+
+
 // importing navbar here
 import { compNav } from "../components/compNav.js";
 let navbar_div = document.getElementById('navbar_div');
@@ -11,7 +15,7 @@ footer_div.innerHTML = footerComp();
 
 async function getCartData(){
   try {
-    let res = await fetch("http://localhost:3000/cartItem")
+    let res = await fetch(baseURL)
     let cartData = await res.json()
     getData(cartData)
   } catch (error) {
