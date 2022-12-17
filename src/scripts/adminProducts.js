@@ -1,4 +1,4 @@
-const cartURL=`http://localhost:3000/cartItem`;
+const cartURL=`http://localhost:3000/proteins`;
 async function recentOrders(){
     try {
         let orderReq=await fetch(cartURL);
