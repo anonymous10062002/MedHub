@@ -1,3 +1,14 @@
+// importing navbar here
+import { compNav } from "../components/compNav.js";
+let navbar_div = document.getElementById('navbar_div');
+navbar_div.innerHTML = compNav();
+
+// importing footer here
+import { footerComp } from "../components/compFooter.js";
+let footer_div = document.getElementById('footer_div');
+footer_div.innerHTML = footerComp();
+
+
 let disease = document.querySelector("#disease");
 let data = [];
 let totalPages = Math.ceil(75 / 6) - 1;
