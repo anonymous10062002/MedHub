@@ -1,42 +1,55 @@
-async function getCartData(){
+let CartBaseURL = "https://lame-hammer-server.onrender.com/cartItem";
+let flag = true;
+
+async function getCartData() {
   try {
-    let res = await fetch("http://localhost:3000/cartItem")
+    let res = await fetch(CartBaseURL)
     let cartData = await res.json()
-    getData(cartData)
+    if (cartData.length !== 0) {
+      getData(cartData)
+      priceDetails(cartData)
+    }
+    else {
+      flag = false;
+      document.querySelector("#coupon").innerHTML = "Apply Coupon"
+      priceDetails(cartData)
+
+      document.getElementById("cart_div").innerHTML = `
+      <div id="empty_cart">
+        <a href="index.html"><img src="./src/images/image.png" alt=""></a>
+      </div>
+      `;
+    }
   } catch (error) {
-    
+    console.log(error)
   }
 }
 getCartData()
-// let x = getDataFromLS.map((item) => {
-
-// })
-// getData(getDataFromLS)
 
 function getData(data) {
-    document.getElementById("cart_div").innerHTML = `
+  document.getElementById("cart_div").innerHTML = `
         ${data
-            .map((item) => {
-                let imgSrc = item.image;
-                let title = item.name;
-                let price = item.price;
-                return renderLSData(imgSrc, title, price);
-            })
-            .join("")}
+      .map((item) => {
+        let dataId = item.id;
+        let imgSrc = item.image;
+        let title = item.name;
+        let price = item.price;
+        return renderLSData(dataId, imgSrc, title, price);
+      })
+      .join("")}
     `;
-    let deleteBtns = document.querySelectorAll(".delete_btn");
+  let deleteBtns = document.querySelectorAll(".delete_btn");
 
   for (let deleteBtn of deleteBtns) {
     deleteBtn.addEventListener("click", (event) => {
-    //   let id = event.target.dataset.id;
-    //   sendToCartPage(id)
-      console.log(event)
+      let id = event.target.dataset.id;
+      deleteFromCartPage(id)
     });
   }
 
 
 
-function renderLSData(imgSrc, title, price) {
+  function renderLSData(dataId, imgSrc, title, price) {
     return `
 <div class="product">
     <div class="product_image">
@@ -47,52 +60,57 @@ function renderLSData(imgSrc, title, price) {
         </div>
     </div>
     <div class="product_btn">
-        <button class="delete_btn"><img src="https://img.1mg.com/images/delete_icon.svg" alt="Remove"></button>
+        <button class="delete_btn" data-id = ${dataId}><img src="https://img.1mg.com/images/delete_icon.svg" alt="Remove"></button>
         <p><button>-</button> 1 <button>+</button></p>
     </div>
 </div>
   `
-}  
-   
-//     let x = document.getElementById("cart-div")
+  }
+}
 
-//     let y = data.map((item) => {
-//         // document.getElementById("cart-div").innerHTML = null
-// console.log(item)
-//         let product = document.createElement("div")
-//         product.setAttribute("class", product)
+function priceDetails(data) {
 
-//         let product_image = document.createElement("div")
-//         product_image.setAttribute("class", product_image)
+  data.length === 0 ? shipping_fee = 0 : shipping_fee = 70;
+  data.length === 0 ? discount_par = 0 : discount_par = 15;
 
-//         let image = document.createElement("img")
-//         image.src = item.image
+  let total = 0
+  data.forEach((item) => {
+    total += item.price
+  })
 
-//         let product_name = document.createElement("div")
-//         product_name.setAttribute("class", product_name)
+  let MRP = document.querySelector("#total_MRP")
+  MRP.innerHTML = "₹" + total
 
-//         let h3 = document.createElement("h3")
-//         h3.innerHTML = item.name
+  let discount = document.querySelector("#discount")
+  discount.innerHTML = discount_par + "%";
 
-//         let p = document.createElement("p")
-//         p.innerHTML = "₹" + item.price
+  let shipping = document.querySelector("#shipping")
+  shipping.innerHTML = shipping_fee;
 
-//         product_name.append(h3,p)
-//         product_image.append(image,product_name)
+  let save = document.querySelector("#total_save")
+  save.innerHTML = "₹" + Math.floor(total * 0.15)
 
-//         let product_btn = document.createElement("div")
-//         product_btn.setAttribute("class", product_btn)
+  let paid = document.querySelector("#total_paid")
+  paid.innerHTML = "₹" + Math.floor((total * 0.85) + shipping_fee)
 
-//         let delete_btn = document.createElement("button")
-//         delete_btn.innerHTML = "Remove"
+}
 
-//         product_btn.append(delete_btn)
+let checkout_btn = document.querySelector("#checkout_btn")
+checkout_btn.addEventListener("click", (e) => {
+  if(flag){
+    location.href = "payment.html"
+  } 
+  else{
+    alert("Your cart is empty...")
+  }
+})
 
-//         product.append(product_image,product_btn)
-
-//         return product
-
-//     })
-
-//    x.innerHTML = y.join(" ")
+async function deleteFromCartPage(id) {
+  let res = await fetch(`${CartBaseURL}/${id}`, {
+    method: "DELETE",
+  })
+  if (res.ok) {
+    // alert("Item deleted from Cart")
+    getCartData()
+  }
 }
