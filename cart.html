@@ -21,7 +21,7 @@
     <h1 style="margin-left: 40px; text-decoration: underline;">My Cart</h1>
     <div id="cart">
         <div id="cart_div">
-                <div class="product">
+                <!-- <div class="product">
                     <div class="product_image">
                         <img src="https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/bda909963ad0474cac331f6f9247a284.jpg" alt="" />
                         <div class="product_name">
@@ -33,37 +33,37 @@
                         <button><img src="https://img.1mg.com/images/delete_icon.svg" alt="Remove"></button>
                         <p><button id="sub">-</button> 1 <button id="add">+</button></p>
                     </div>
-                </div>
+                </div> -->
         </div>
 
         <div id="details-div">
             <div>
-                <h2>No coupon available</h2>
+                <h2 id="coupon">No coupon available</h2>
             </div>
             <div id="payment-detail">
                 <div>
                     <h4>Item Total(MRP)</h4>
-                    <h4>₹ 113</h4>
+                    <h4 id="total_MRP">0</h4>
                 </div>
                 <div>
-                    <h4>Price Discount</h4>
-                    <h4>-₹ 13</h4>
+                    <h4>Discount %</h4>
+                    <h4 id="discount"> 0%</h4>
                 </div>
                 <div>
                     <h4>Shipping Fee</h4>
-                    <h4>As per delivery address</h4>
+                    <h4 id="shipping">0</h4>
                 </div>
                 <div style="color: rgb(35, 35, 35);">
                     <h2>To be paid</h2>
-                    <h2>₹ 113</h2>
+                    <h2 id="total_paid">₹ 0</h2>
                 </div>
                 <div style="background-color: rgb(210, 206, 206);">
                     <h3>Total Savings</h3>
-                    <h3 style="color: darkgreen;">₹ 13</h3>
+                    <h3 id="total_save" style="color: darkgreen;">₹ 0</h3>
                 </div>
             </div>
             <div>
-                <button>CHECKOUT</button>
+                <button id="checkout_btn">CHECKOUT</button>
             </div>
         </div>
 
@@ -75,4 +75,6 @@
 
 </html>
 
+
 <script type="module" src="./src/scripts/cart.js"></script>
+

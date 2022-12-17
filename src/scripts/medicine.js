@@ -14,6 +14,16 @@ footer_div.innerHTML = footerComp();
 
 
 
+// function handel(){
+//   let x = document.querySelector("#select").value;
+// console.log(x)
+//   // if(x === "Low to High"){
+//   //   baseURL = "http://localhost:3000/medicines?sortBy=price&order=desc"
+//   //   fetchMedicineData();
+//   // }
+// }
+// handel()
+
 async function fetchMedicineData(pageNumber = 1, dataParPage = 10) {
   try {
     let fetchData = await fetch(
@@ -26,7 +36,7 @@ async function fetchMedicineData(pageNumber = 1, dataParPage = 10) {
     console.log(err);
   }
 }
-fetchMedicineData(1, 10);
+fetchMedicineData();
 
 function getData(data) {
   document.getElementById("app").innerHTML = `
@@ -50,11 +60,13 @@ function getData(data) {
     addBtn.addEventListener("click", (event) => {
       let id = event.target.dataset.id;
       sendToCartPage(id)
-       console.log(id)
-       console.log(event);
+
+       //console.log(id)
+
     });
   }
 }
+ 
 
 function renderData(dataId, imgSrc, title, dis, price) {
   return `
@@ -89,9 +101,7 @@ function renderPaginationBtn(totalPage) {
   for (let paginationBtn of paginationBtns) {
     paginationBtn.addEventListener("click", (event) => {
       let pageNumber = event.target.dataset.id;
-      //console.log(event);
       fetchMedicineData(pageNumber, 10);
-      console.log("HHHH")
     });
   }
 }

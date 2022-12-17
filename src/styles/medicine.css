@@ -47,7 +47,7 @@ body {
 }
 button:hover{
   cursor: pointer;
-  /* background-color: aqua; */
+  background-color: aqua;
 }
 
 /* pagination section */
