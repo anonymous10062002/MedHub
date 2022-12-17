@@ -1,9 +1,6 @@
-import config from "../../config";
 
-let baseURL = config.users;
-
-    // let baseURL=`http://localhost:3000/`;
-    // let postUserURL=`${baseURL}users`;
+    let baseURL=`http://localhost:3000/`;
+    let postUserURL=`${baseURL}users`;
     let form=document.getElementById("signupForm");
     form.addEventListener("submit",saveCredentials);
     function saveCredentials(event){
@@ -20,7 +17,7 @@ let baseURL = config.users;
     }
     async function funcPost(userObj){
         try {
-            let req= await fetch(baseURL,{
+            let req= await fetch(postUserURL,{
                 method:"POST",
                 headers:{
                     "Content-Type":"application/json"
