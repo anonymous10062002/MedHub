@@ -7,7 +7,6 @@ export default function compSlider(slider_div) {
     container.setAttribute('src', 'https://onemg.gumlet.io/f4588afb-3c1e-4924-ab9f-a1764044a714_1670244640.jpg?w=899&h=200&format=auto')
     let slider_container = document.getElementById(slider_div)
     slider_container.append(container);
-    console.log(container);
 
     let img1 = 'https://onemg.gumlet.io/f4588afb-3c1e-4924-ab9f-a1764044a714_1670244640.jpg?w=899&h=200&format=auto';
     let img2 = 'https://onemg.gumlet.io/a_ignore,w_899,h_200,c_fit,q_auto,f_auto/b58b9e0e-a6f7-45b5-a28a-dd833066c127.png';

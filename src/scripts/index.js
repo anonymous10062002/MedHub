@@ -21,7 +21,6 @@ let omega_and_fish_oil_URL = config.omega_and_fish_oil;
 // importing gen_ren_func
 import { renderCardList } from "../components/gen_ren_func.js";
 
-
 // Fetching Oil Data
 ;(async function fetchFunc() {
     try {
@@ -31,7 +30,6 @@ import { renderCardList } from "../components/gen_ren_func.js";
     } catch (error) {
         alert(error);
     }
-    
 })()
 
 let popular_combo_deals_div = document.getElementById('popular_combo_deals_div');

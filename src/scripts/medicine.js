@@ -45,6 +45,7 @@ function getData(data) {
       let id = event.target.dataset.id;
       sendToCartPage(id)
        console.log(id)
+       console.log(event);
     });
   }
 }

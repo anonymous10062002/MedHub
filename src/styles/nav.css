@@ -159,7 +159,10 @@ ul li {
     padding-top: 10px;
 
 }
-
+ul li a{
+    text-decoration: none;
+    color: black;
+}
 .menu {
     font-size: 20px;
 }
