@@ -10,7 +10,7 @@ import { compNav } from "../components/compNav.js";
 let navbar_div = document.getElementById('navbar_div');
 navbar_div.innerHTML = compNav();
 
-// appending the navbar
+// appending the footer
 let footer_div = document.getElementById('footer_div');
 footer_div.innerHTML = footerComp();
 
@@ -31,4 +31,4 @@ let protein_data_div = document.getElementById('protein_data_div');
     }
 })();
 
-// Sorting Functionality
+// add_button functionality

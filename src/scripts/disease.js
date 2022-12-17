@@ -1,8 +1,23 @@
+import config from "../../config.js";
+let baseurl = config.diseases
+
+// importing navbar here
+import { compNav } from "../components/compNav.js";
+let navbar_div = document.getElementById('navbar_div');
+navbar_div.innerHTML = compNav();
+
+// importing footer here
+import { footerComp } from "../components/compFooter.js";
+import config from "../../config.js";
+let footer_div = document.getElementById('footer_div');
+footer_div.innerHTML = footerComp();
+
+
 let disease = document.querySelector("#disease");
 let data = [];
 let totalPages = Math.ceil(75 / 6) - 1;
-let baseurl = "https://639ada81d51415019741833a.mockapi.io/disease";
-let defaulturl = "https://639ada81d51415019741833a.mockapi.io/disease?page=1&limit=6";
+// let baseurl = "https://639ada81d51415019741833a.mockapi.io/disease";
+let defaulturl = `${baseurl}?_page=1&_limit=6`;
 async function diseasefetch(url) {
     try {
         let req = await fetch(url);
@@ -39,7 +54,7 @@ let arr = document.querySelectorAll(".pageButton");
 for (let page of arr) {
     page.addEventListener("click", (event) => {
         let x = event.target.id;
-        let url = baseurl + `?page=${x}&limit=6`;
+        let url = baseurl + `?_page=${x}&_limit=6`;
         diseasefetch(url);
     })
 }

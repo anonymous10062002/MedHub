@@ -4,7 +4,7 @@ export function compNav() {
 
     <div id="nav">
         <div id="upperPartNav">
-            <div id="plans"> <img src="./src/images/logo.png" alt="logo image">
+            <div id="plans"> <a href="index.html"><img src="./src/images/logo.png" alt="logo image"></a>
                 <p>MEDICINES</p>
                 <p>LEB TESTS</p>
                 <p>CONSULT DOCTORS</p>
@@ -51,8 +51,9 @@ export function compNav() {
                 <div id="resorces" class="menu " >Resorces Center</div>
                 <div class="dropDown">
                     <ul>
-                        <li>All Diseases</li>
-                        <li> All Medicines</li>
+                    
+                        <li><a href="disease.html">All Diseases</a></li>
+                        <li><a href="medicine.html">All Medicine</a></li>
                         <li>Medicines by Therapeutic Class</li>
                     </ul>
                 </div>
@@ -76,7 +77,7 @@ export function compNav() {
                     </ul>
 
                     <ul>
-                        <li>Protein Supplements</li>
+                        <li><a href="protein_supliments.html">Protein Supplements</a></li>
                         <li>Whey Protein</li>
                         <li>Amino Acids</li>
                         <li>Mass Gainers</li>

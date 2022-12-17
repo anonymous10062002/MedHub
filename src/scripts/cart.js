@@ -1,9 +1,23 @@
-let CartBaseURL = "https://lame-hammer-server.onrender.com/cartItem";
-let flag = true;
 
-async function getCartData() {
+import config from "../../config.js";
+let baseURL = config.cartItem;
+
+
+// importing navbar here
+import { compNav } from "../components/compNav.js";
+let navbar_div = document.getElementById('navbar_div');
+navbar_div.innerHTML = compNav();
+
+// importing footer here
+import { footerComp } from "../components/compFooter.js";
+let footer_div = document.getElementById('footer_div');
+footer_div.innerHTML = footerComp();
+
+
+async function getCartData(){
   try {
-    let res = await fetch(CartBaseURL)
+    let res = await fetch(baseURL)
+
     let cartData = await res.json()
     if (cartData.length !== 0) {
       getData(cartData)
