@@ -3,6 +3,27 @@ import { compNav } from "../components/compNav.js";
 let navbar_div = document.getElementById('navbar_div');
 navbar_div.innerHTML = compNav();
 
+//importing side Nav bar
+import { compSideNav } from "../components/CompsideNav.js";
+// let sidenavbar_div = document.getElementById('navbar_div');
+let bd = window.addEventListener("resize", myfun)
+function myfun(event) {
+    let s = event.target.outerWidth;
+    if (s <= 1000) {
+        navbar_div.innerHTML = null;
+        navbar_div.innerHTML = compSideNav();
+    }
+    if (s > 1000) {
+        navbar_div.innerHTML = null;
+        navbar_div.innerHTML = compNav();
+    }
+}
+let d = window.outerWidth;
+if (d <= 1000) {
+    navbar_div.innerHTML = null;
+    navbar_div.innerHTML = compSideNav();
+}
+// navbar_div.innerHTML = compSideNav();
 // importing footer here
 import { footerComp } from "../components/compFooter.js";
 let footer_div = document.getElementById('footer_div');
@@ -16,17 +37,17 @@ compSlider('carousel_div')
 import config from "../../config.js";
 let baseURL = config.baseURL;
 let omega_and_fish_oil_URL = config.omega_and_fish_oil;
- let popular_combo_deals = config.popular_combo_deals;
+let popular_combo_deals = config.popular_combo_deals;
 
 // importing gen_ren_func
 import { renderCardList } from "../components/gen_ren_func.js";
 
 // Fetching Oil Data
-;(async function fetchFunc() {
+; (async function fetchFunc() {
     try {
         let res = await fetch(omega_and_fish_oil_URL);
         let oil_data = await res.json();
-        renderCardList(oil_div,oil_data);
+        renderCardList(oil_div, oil_data);
     } catch (error) {
         alert(error);
     }
@@ -34,11 +55,11 @@ import { renderCardList } from "../components/gen_ren_func.js";
 
 let popular_combo_deals_div = document.getElementById('popular_combo_deals_div');
 // Fetching Combo Data
-;(async function fetchFunc() {
+; (async function fetchFunc() {
     try {
         let res = await fetch(popular_combo_deals);
         let popular_combo_deals_data = await res.json();
-        renderCardList(popular_combo_deals_div,popular_combo_deals_data);
+        renderCardList(popular_combo_deals_div, popular_combo_deals_data);
     } catch (error) {
         alert(error);
     }

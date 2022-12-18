@@ -1,9 +1,9 @@
 body {
     font-family: sans-serif;
     /* background-color: rgb(225, 223, 220); */
-  }
+}
 
-#cart{
+#cart {
     width: 70%;
     margin: 30px auto;
     /* border: 1px solid red; */
@@ -12,36 +12,30 @@ body {
     flex-direction: row;
     justify-content: space-evenly; */
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
 }
-#cart-div{
-    /* width: 48vw; */
-    /* margin: 10px auto; */
-    /* border: 1px solid green; */
-    /* height: 300px; */
-    /* display: grid;
-    grid-template-columns: repeat(1,1fr);
-    gap: 20px; */
-}
-.product{
+
+.product {
     height: 142px;
     box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
     display: flex;
     border: 1px solid gray;
     background-color: white;
-    border-radius:11px;
+    border-radius: 11px;
     flex-direction: row;
     justify-content: space-between;
     margin: 5px 0px;
 }
+
 /* .product>div{
     border: 1px solid red;
 } */
-.product_image{
+.product_image {
     padding: 7px;
     display: flex;
 }
+
 .product_image img {
     height: 120px;
     width: 10vw;
@@ -50,49 +44,51 @@ body {
     /* object-fit: cover; */
     border-radius: 11px;
 }
-.product_name{
+
+.product_name {
     padding-left: 15px;
 }
-.product_btn{
+
+.product_btn {
     /* margin: auto; */
     width: 70px;
     padding: 15px 0px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: white;
     /* border: 1px solid red; */
-}   
-.product_btn button{
+}
+
+.product_btn button {
     border: none;
     border-radius: 7px;
     font-size: large;
     /* background: none; */
-    color: blue;
-}
-#empty_cart{
-   border: 1px solid rgb(196, 190, 190);
-}
-#empty_cart img{
-  width: 100%;
+    text-align: center;
+    background-color: white;
 }
 
-
-
- /* ------ details ------- */
-#details-div{
-    /* width: 25vw; */
-    /* margin: 10px auto; */
-    /* border: 1px solid yellow; */
-    /* height: 300px; */
-    /* display: grid;
-    grid-template-columns: repeat(1,1fr); */
-    /* gap: 15px;  */
+#empty_cart {
+    border: 1px solid rgb(196, 190, 190);
 }
-#details-div>div:not(:last-child){
+
+#empty_cart img {
+    width: 100%;
+}
+
+.placeicon {
+    font-family: fontawesome;
+    color: black;
+}
+
+/* ------ details ------- */
+
+#details-div>div:not(:last-child) {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
-#details-div>div:nth-child(1){
+#details-div>div:nth-child(1) {
     height: 58px;
     /* border: 2px solid blueviolet; */
     /* padding: 8px; */
@@ -102,36 +98,52 @@ body {
     justify-content: center;
     align-items: center;
 }
-#payment-detail{
+
+#payment-detail {
     margin: 10px 0px;
     /* padding-bottom:  10px; */
     /* border: 2px solid blueviolet; */
     background-color: white;
 }
-#payment-detail div{
+
+#payment-detail div {
     height: 40px;
-    padding: 0px 28px; 
+    padding: 0px 28px;
     display: flex;
     justify-content: space-between;
     color: rgb(126, 127, 129);
     /* border: 1px solid red; */
     align-items: center;
 }
-#details-div button{
+
+
+#checkout_btn {
     width: 100%;
-    padding: 10px 0px;
-    font-size: x-large;
-    border-radius: 7px;
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
     border: none;
-    background-color: rgb(148, 56, 56);
+    padding: 0 56px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 7px;
+    background-color: #0070f3;
     color: white;
+    font-weight: 400;
+    font-size: 16px;
+    box-shadow: 0 4px 14px 0 rgb(0 118 255 / 39%);
+    transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 }
 
+#checkout_btn:hover {
+    background: rgba(0, 118, 255, 0.9);
+    box-shadow: 0 6px 20px rgb(0 118 255 / 23%);
+}
 
 /* ------------------ */
 
 @media screen and (min-width: 320px) and (max-width: 650px) {
-    #cart{
+    #cart {
         width: 70%;
         margin: 30px auto;
         /* border: 1px solid red; */
@@ -140,10 +152,10 @@ body {
         flex-direction: column;
         /* justify-content: space-evenly; */
     }
-  }
-  
-  @media screen and (min-width: 651px) and (max-width: 1024px) {
-    #cart{
+}
+
+@media screen and (min-width: 651px) and (max-width: 1024px) {
+    #cart {
         width: 70%;
         margin: 30px auto;
         /* border: 1px solid red; */
@@ -152,4 +164,4 @@ body {
         flex-direction: column;
         /* justify-content: space-evenly; */
     }
-  }
+}

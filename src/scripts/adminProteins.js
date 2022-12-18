@@ -1,4 +1,4 @@
-const cartURL=`https://lame-hammer-server4.onrender.com/proteins/`;
+const cartURL=`http://localhost:3000/proteins`;
 async function recentOrders(){
     try {
         let orderReq=await fetch(cartURL);

@@ -7,7 +7,25 @@ let baseURL = config.medicine;
 import { compNav } from "../components/compNav.js";
 let navbar_div = document.getElementById('navbar_div');
 navbar_div.innerHTML = compNav();
+import { compSideNav } from "../components/CompsideNav.js";
+let bd = window.addEventListener("resize", myfun)
+function myfun(event) {
+  let s = event.target.outerWidth;
+  if (s <= 1000) {
+    navbar_div.innerHTML = null;
+    navbar_div.innerHTML = compSideNav();
+  }
+  if (s > 1000) {
+    navbar_div.innerHTML = null;
+    navbar_div.innerHTML = compNav();
+  }
 
+}
+let d = window.outerWidth;
+if (d <= 1000) {
+  navbar_div.innerHTML = null;
+  navbar_div.innerHTML = compSideNav();
+}
 import { footerComp } from "../components/compFooter.js";
 let footer_div = document.getElementById('footer_div');
 footer_div.innerHTML = footerComp();
@@ -42,15 +60,15 @@ function getData(data) {
   document.getElementById("app").innerHTML = `
      <div class="card-list">
       ${data
-        .map((item) => {
-          let dataId = item.id;
-          let imgSrc = item.image;
-          let title = item.name;
-          let dis = item.description;
-          let price = item.price;
-          return renderData(dataId, imgSrc, title, dis, price);
-        })
-        .join("")}
+      .map((item) => {
+        let dataId = item.id;
+        let imgSrc = item.image;
+        let title = item.name;
+        let dis = item.description;
+        let price = item.price;
+        return renderData(dataId, imgSrc, title, dis, price);
+      })
+      .join("")}
       </div>
    `;
   // ---- Add Button in Card ----
@@ -61,12 +79,12 @@ function getData(data) {
       let id = event.target.dataset.id;
       sendToCartPage(id)
 
-       //console.log(id)
+      //console.log(id)
 
     });
   }
 }
- 
+
 
 function renderData(dataId, imgSrc, title, dis, price) {
   return `
@@ -116,40 +134,39 @@ function createPagButton(totalPage) {
 }
 
 function getAsBtn(text, cls, dataId) {
-  return `<button class="${cls}" ${
-    dataId ? `data-id = ${dataId}` : ""
-  }> ${text} </button>`;
+  return `<button class="${cls}" ${dataId ? `data-id = ${dataId}` : ""
+    }> ${text} </button>`;
 }
 
 // ----- Send to Cart Page -----
 
-async function sendToCartPage(id){
-  try{
+async function sendToCartPage(id) {
+  try {
     let fetchCartData = await fetch(`${baseURL}/${id}`)
     let data = await fetchCartData.json()
-    
+
     sendData(data)
   }
-  catch(err){
+  catch (err) {
     console.log(err)
   }
 }
 
 let cartURL = config.cartItem
-async function sendData(data){
-  try{
-    let res = await fetch(cartURL,{
+async function sendData(data) {
+  try {
+    let res = await fetch(cartURL, {
       method: "POST",
-      headers:{
-        "Content-Type" : "application/json"
+      headers: {
+        "Content-Type": "application/json"
       },
-      body : JSON.stringify(data)
+      body: JSON.stringify(data)
     })
-    if(res.ok){
+    if (res.ok) {
       alert("Item added to cart")
     }
   }
-  catch(err){
+  catch (err) {
     console.log(err)
   }
 }
