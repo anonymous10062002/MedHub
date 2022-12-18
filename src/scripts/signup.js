@@ -1,6 +1,9 @@
 
-    let baseURL=`http://localhost:3000/`;
-    let postUserURL=`${baseURL}users`;
+// import config from "../../config";
+
+
+    let postUserURL=`https://lame-hammer-server3.onrender.com/users`;
+    
     let form=document.getElementById("signupForm");
     form.addEventListener("submit",saveCredentials);
     function saveCredentials(event){

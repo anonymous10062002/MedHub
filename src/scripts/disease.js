@@ -8,7 +8,7 @@ navbar_div.innerHTML = compNav();
 
 // importing footer here
 import { footerComp } from "../components/compFooter.js";
-import config from "../../config.js";
+// import config from "../../config.js";
 let footer_div = document.getElementById('footer_div');
 footer_div.innerHTML = footerComp();
 
