@@ -1,6 +1,6 @@
 
-import config from "../../config.js";
-let baseURL = config.cartItem;
+// import config from "../../config.js";
+// let baseURL = config.cartItem;
 
 
 // importing navbar here
@@ -14,10 +14,12 @@ let footer_div = document.getElementById('footer_div');
 footer_div.innerHTML = footerComp();
 
 
-async function getCartData(){
-  try {
-    let res = await fetch(baseURL)
+let CartBaseURL = "https://lame-hammer-server3.onrender.com/cartItem";
+let flag = true;
 
+async function getCartData() {
+  try {
+    let res = await fetch(CartBaseURL)
     let cartData = await res.json()
     if (cartData.length !== 0) {
       getData(cartData)
@@ -83,6 +85,9 @@ function getData(data) {
 }
 
 function priceDetails(data) {
+
+  let shipping_fee = 0;
+  let discount_par = 0;
 
   data.length === 0 ? shipping_fee = 0 : shipping_fee = 70;
   data.length === 0 ? discount_par = 0 : discount_par = 15;
