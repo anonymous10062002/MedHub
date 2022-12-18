@@ -17,7 +17,8 @@ let disease = document.querySelector("#disease");
 let data = [];
 let totalPages = Math.ceil(75 / 6) - 1;
 // let baseurl = "https://639ada81d51415019741833a.mockapi.io/disease";
-let defaulturl = `${baseurl}?_page=1&_limit=6`;
+// let defaulturl = `${baseurl}?_page=1&_limit=6`;
+let defaulturl = `https://lame-hammer-server4.onrender.com/diseases?_page=1&_limit=6`;
 async function diseasefetch(url) {
     try {
         let req = await fetch(url);

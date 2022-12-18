@@ -68,3 +68,8 @@ button:hover{
   border: none;
   margin: 0px 2px;
 }
+
+.pagination-wrapper button:hover{
+  cursor: pointer;
+  color: red;
+}

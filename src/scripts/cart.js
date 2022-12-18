@@ -14,7 +14,7 @@ let footer_div = document.getElementById('footer_div');
 footer_div.innerHTML = footerComp();
 
 
-let CartBaseURL = "https://lame-hammer-server3.onrender.com/cartItem";
+let CartBaseURL = "https://lame-hammer-server4.onrender.com/cartItem";
 let flag = true;
 
 async function getCartData() {

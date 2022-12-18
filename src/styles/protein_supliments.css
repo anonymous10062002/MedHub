@@ -125,3 +125,30 @@ select{
         grid-template-rows: repeat(4, 52vh);
     }
 }
+
+
+/* =========== */
+
+/* pagination section */
+#pagination_button_wrapper {
+    /* border: 1px dashed #e1e1e1;
+    border-radius: 4px; */
+    margin: 16px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    width: 80%;
+  }
+  
+  #pagination_button_wrapper button {
+    background: none;
+    border: none;
+    margin: 0px 2px;
+  }
+  
+  #pagination_button_wrapper button:hover{
+    cursor: pointer;
+    color: red;
+  }
