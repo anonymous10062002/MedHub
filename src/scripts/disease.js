@@ -5,10 +5,28 @@ let baseurl = config.diseases
 import { compNav } from "../components/compNav.js";
 let navbar_div = document.getElementById('navbar_div');
 navbar_div.innerHTML = compNav();
+import { compSideNav } from "../components/CompsideNav.js";
+let bd = window.addEventListener("resize", myfun)
+function myfun(event) {
+    let s = event.target.outerWidth;
+    if (s <= 1000) {
+        navbar_div.innerHTML = null;
+        navbar_div.innerHTML = compSideNav();
+    }
+    if (s > 1000) {
+        navbar_div.innerHTML = null;
+        navbar_div.innerHTML = compNav();
+    }
 
+}
+let d = window.outerWidth;
+if (d <= 1000) {
+    navbar_div.innerHTML = null;
+    navbar_div.innerHTML = compSideNav();
+}
 // importing footer here
 import { footerComp } from "../components/compFooter.js";
-import config from "../../config.js";
+// import config from "../../config.js";
 let footer_div = document.getElementById('footer_div');
 footer_div.innerHTML = footerComp();
 

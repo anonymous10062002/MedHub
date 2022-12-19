@@ -1,66 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+}
 
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        .container{
-            /* border: 2px solid red; */
-            display: flex;
-            width: 100%;
-            justify-content: space-around;
-        }
-        #left{
-            /* border: 2px solid blue; */
-            width: 30vw;
-            text-align: center;
-        }
-        #right{
-            /* border: 2px solid blue; */
-            width: 30vw;
-        }
-        #username, #password{
-            border-top-style: hidden;
-            border-right-style: hidden;
-            border-left-style: hidden;
-            margin-bottom:8%;
-        }
-        #username, #password:focus {
-            outline: none;
-        }
-        #username, #password, #loginBtn{
-            width: 100%;
-            height: 35px;
-        }
-        #loginBtn{
-            margin-top: 5%;
-            background-color: #5468ff;
-            font-size: large;
-            color: white;
-        }
-        #sliderImage{
-            margin-top: 10%;
-            margin-bottom: 10%;
-        }
-        #sliderHeading,#head,#para{
-            margin-bottom: 5%;
-        }
-        #loginForm{
-            margin-bottom: 5%;
-        }
-        #already,#policy{
-            text-align: center;
-            margin-bottom: 5%;
-        }
+.container {
+    /* border: 2px solid red; */
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+#left {
+    /* border: 2px solid blue; */
+    width: 30vw;
+    text-align: center;
+}
+
+#right {
+    /* border: 2px solid blue; */
+    width: 30vw;
+}
+
+#right h1 {
+    color: #0070f3;
+}
+
+#username,
+#password {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    margin-bottom: 8%;
+}
+
+#username,
+#password:focus {
+    outline: none;
+}
+
+#username,
+#password,
+#loginBtn {
+    width: 100%;
+    height: 35px;
+}
+
+#loginBtn {
+    margin-top: 5%;
+    font-size: large;
+
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    border: none;
+    padding: 0 56px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 7px;
+    background-color: #0070f3;
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    box-shadow: 0 4px 14px 0 rgb(0 118 255 / 39%);
+    transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#loginBtn:hover {
+    background: rgba(0, 118, 255, 0.9);
+    box-shadow: 0 6px 20px rgb(0 118 255 / 23%);
+}
+
+#sliderImage {
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+#sliderHeading,
+#head,
+#para {
+    margin-bottom: 5%;
+}
+
+#para {
+    font-size: 20px;
+}
+
+#loginForm {
+    margin-bottom: 5%;
+}
+
+#already,
+#policy {
+    text-align: center;
+    margin-bottom: 5%;
+
+}
+
+#already a {
+    text-decoration: none;
+    font-size: 20px;
+
+}
+
 @media screen and (max-width: 480px) {
-    .container{
+    .container {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    #left,#right{
+
+    #left,
+    #right {
         width: 90vw;
     }
-    #left{
+
+    #left {
         margin-bottom: 25px;
     }
 }

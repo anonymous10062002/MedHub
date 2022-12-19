@@ -1,6 +1,6 @@
 body {
   font-family: sans-serif;
-  background-color: floralwhite;
+
 }
 
 #app {
@@ -11,6 +11,9 @@ body {
   grid-gap: 10px;
   /* border: 2px solid blue; */
 }
+
+
+
 .card {
   margin: 10px auto;
   /* border: 2px solid red; */
@@ -22,32 +25,53 @@ body {
   border-radius: 11px;
   background-color: white;
 }
+
 .card div {
   padding: 10px;
 }
+
 .card_image img {
   height: 150px;
   width: 10vw;
   /* object-fit: cover; */
 }
-.card_t{
+
+.card_t {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+
 }
+
+.card_t h3 {
+  color: #0070f3;
+}
+
+
+
 .card_btn {
   width: 80px;
   border: 0px;
-  border-radius: 7px;
-  padding: 5px 15px;
-  background-color: red;
-  font-family: "verdana", "sans-serif";
-  font-size: 15px;
-  color: #1c1c1c;
-}
-button:hover{
+  display: inline-block;
+  outline: 0;
+  border: 0;
   cursor: pointer;
-  background-color: aqua;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 4px;
+  font-size: 14px;
+  height: 30px;
+  padding: 0px 15px;
+  text-shadow: rgb(0 0 0 / 25%) 0px 3px 8px;
+  background: linear-gradient(92.88deg, rgb(69, 94, 181) 9.16%, rgb(86, 67, 204) 43.89%, rgb(103, 63, 215) 64.72%);
+  transition: all 0.5s ease 0s;
+
+}
+
+button:hover {
+  cursor: pointer;
+  box-shadow: rgb(80 63 205 / 50%) 0px 1px 40px;
+  transition: all 0.1s ease 0s;
 }
 
 /* pagination section */

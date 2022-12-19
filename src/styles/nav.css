@@ -70,6 +70,7 @@
     background-color: rgb(243, 240, 240);
     margin-left: 30px;
     border-radius: 5px;
+    padding-left: 20px;
 }
 
 #location select {
@@ -79,6 +80,7 @@
     font-size: 15px;
     height: 90%;
     background-color: rgb(243, 240, 240);
+    margin-left: 10px;
 }
 
 #searchBar {
@@ -90,7 +92,7 @@
 }
 
 #searchBar input {
-    width: 550px;
+    width: 70%;
     height: 90%;
     border: none;
     background-color: rgb(243, 240, 240);
@@ -159,10 +161,12 @@ ul li {
     padding-top: 10px;
 
 }
-ul li a{
+
+ul li a {
     text-decoration: none;
     color: black;
 }
+
 .menu {
     font-size: 20px;
 }

@@ -86,3 +86,17 @@ hr {
     background-color: rgb(251, 248, 248);
 
 }
+
+@media screen and (max-width: 1000px) {
+    border {
+        text-align: center;
+        width: 100%;
+    }
+
+    #firstLevel {
+        text-align: center;
+        height: 1000px;
+        flex-direction: column;
+        width: 100%;
+    }
+}
