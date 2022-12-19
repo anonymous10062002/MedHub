@@ -12,19 +12,16 @@
         <header id="header">
             <img id="logo" src="./src/images/logo.png" alt="Medhub">
             <div id="user"><a href="adminUsers.html">Users</a></div>
-            <div id="product"><a href="adminProducts.html">Products</a></div>
+            <div id="product" onclick="pdctDrpDn()">Products
+                <ul id="productDropDown">
+                    <li><a href="./adminMedicine.html">Medicine</a></li>
+                    <li><a href="./adminProteins.html">Protein </a></li>
+                </ul>
+            </div>
             <div id="order"><a href="adminOrders.html">Orders</a></div>
         </header>
         <div id="landing">
-            <!-- <div id="left">
-                <p>Title</p>
-                <img src="#" alt="image">
-                <h3>Rs 500</h3>
-            </div>
-            <div id="right">
-                <h2>Description</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime omnis numquam aperiam. Itaque vero eius libero consequuntur reprehenderit architecto ab rerum temporibus impedit qui sunt, a maiores dolore assumenda aliquid?</p>
-            </div> -->
+            <!-- API DATA -->
         </div>
     </div>
 <script src="./src/scripts/admin.js"></script>

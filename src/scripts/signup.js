@@ -1,25 +1,22 @@
 
-// import config from "../../config";
-import { footerComp } from "../components/compFooter.js";
-let footer_div = document.getElementById('footer_div');
-footer_div.innerHTML = footerComp();
-
-let postUserURL = `https://lame-hammer-server3.onrender.com/users`;
-
-let form = document.getElementById("signupForm");
-form.addEventListener("submit", saveCredentials);
-function saveCredentials(event) {
-    event.preventDefault();
-    let userName = document.getElementById("username").value;
-    let passWord = document.getElementById("password").value;
-    let mobileNum = document.getElementById("mobile").value;
-    let userObj = {
-        username: userName,
-        password: passWord,
-        mobile: mobileNum
-    }
-    funcPost(userObj);
-}
+    import { footerComp } from "../components/compFooter.js";
+    let footer_div = document.getElementById('footer_div');
+    footer_div.innerHTML = footerComp();
+    let postUserURL=`https://lame-hammer-server4.onrender.com/users`;
+    let form=document.getElementById("signupForm");
+    form.addEventListener("submit",saveCredentials);
+    function saveCredentials(event){
+        event.preventDefault();
+        let userName=document.getElementById("username").value;
+        let passWord=document.getElementById("password").value;
+        let mobileNum= document.getElementById("mobile").value;
+        let userObj={
+            username:userName,
+            password:passWord,
+            mobile:mobileNum
+        }
+        funcPost(userObj);
+     }
 async function funcPost(userObj) {
     try {
         let req = await fetch(postUserURL, {

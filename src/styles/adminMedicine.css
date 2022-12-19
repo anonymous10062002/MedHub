@@ -18,6 +18,26 @@
     transition: 0.5s;
     /* border: 1px solid red; */
 }
+#productDropDown
+{
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding-top: 10px;
+    color: blue;
+    left: 830px;
+    overflow: hidden;
+    background-color: white;
+    height: 0px;
+    transition: 0.5s;
+}
+#productDropDown li{
+    padding-top: 10px;
+    text-decoration: none;
+    color: blue;
+}
 #farm2{
     height: 0px;
 }
@@ -121,26 +141,6 @@
 #prodDesc{
     color: rgb(217,0,0);
     margin-bottom: 15px;
-}
-#productDropDown
-{
-    position: absolute;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    padding-top: 10px;
-    color: blue;
-    left: 830px;
-    overflow: hidden;
-    background-color: white;
-    height: 0px;
-    transition: 0.5s;
-}
-#productDropDown li{
-    padding-top: 10px;
-    text-decoration: none;
-    color: blue;
 }
 #editItem{
     border: 0;
