@@ -1,5 +1,5 @@
-// import config from "../../config.js";
-// let protein_URL = `${config.proteins}?_sort=price`
+import config from "../../config.js";
+let protein_URL = config.proteins;
 // let omega_and_fish_oil_URL = config.omega_and_fish_oil;
 
 // importing Navbar and Footer
@@ -15,16 +15,14 @@ let footer_div = document.getElementById('footer_div');
 footer_div.innerHTML = footerComp();
 
 // Importing sorting function
-// import { get_sorted_data } from "../components/sort_func.js";
+import { get_sorted_data } from "../components/sort_func.js";
 
 // importing renderCardList() function
-import { renderCardList, generateCard } from "../components/gen_ren_func.js";
+import { generateCard } from "../components/gen_ren_func.js";
 // import { crud_get_opt } from "../components/CRUD_opt.js";
 
 
-// let protein_data_div = document.getElementById('protein_data_div');
-
-async function fetch_protein_data(page_number=1,data_per_page=8) {
+async function fetch_protein_data(page_number=1,data_per_page=10) {
     try {
         let res = await fetch(`https://lame-hammer-server4.onrender.com/proteins/?_page=${page_number}&_limit=${data_per_page}`);
         let protein_data = await res.json();
@@ -48,7 +46,8 @@ function renderCardList2(data) {
             let dataId = item.id;
             let img = item.image;
             let name = item.name;
-            let strikedPrice = item.strikedPrice;
+            // let strikedPrice = item.strikedPrice;
+            let strikedPrice = 'XYZ Proteins';
             // let dis = item.description;
             let price = item.price;
             return generateCard(dataId,img,name,strikedPrice,price)
@@ -64,7 +63,7 @@ function renderCardList2(data) {
         let id = event.target.dataset.id;
         // let id = event.target.dataset.id;
         get_protein_item_by_id(id)
-  
+        
          console.log(id)
   
       });
@@ -107,33 +106,29 @@ async function sent_to_cart(data) {
   }
 }
 
-//=======
+//==================
 // Sorting Function
-// let sort_button = document.getElementById('select');
-// sort_button.addEventListener('change', ()=> {
-//     if(sort_button.value==='high_to_low') {
-//         protein_data_div.innerHTML = null;
-//         console.log(sort_button.value);
-//         // renderCardList2(protein_data_div,get_sorted_data(protein_URL, 'price'));
-//         // get_sorted_data(protein_URL, 'price');
-//         // renderCardList2(protein_data_div,protein_data);
-//         ;(async function() {
-//             let res = await fetch(`${protein_URL}?_sort=${sortBy}&_order=asc`)
-//             let data = await res.json()
-//             renderCardList2(protein_data_div, data)
-//         })
-        
-//     }
-// })
+let sorted_protein_data_asc = await get_sorted_data(protein_URL, 'price', 'asc');
+let sorted_protein_data_desc = await get_sorted_data(protein_URL, 'price', 'desc')
 
-// get_sorted_data(protein_URL, 'price')
+let sort_button = document.getElementById('sort_tag');
+sort_button.addEventListener('change', ()=> {
+  if(sort_button.value=='low_to_high') {
+    document.getElementById('protein_data_div').innerHTML = null;
+    renderCardList2(sorted_protein_data_asc);
+    
+  } else if(sort_button.value=='high_to_low') {
+    document.getElementById('protein_data_div').innerHTML = null;
+    renderCardList2(sorted_protein_data_desc);
+  }
+})
 
-// =========
+//==================
 // Pagination:
 
 let pagination_button_wrapper = document.getElementById('pagination_button_wrapper');
 
-let total_page = Math.ceil(50/8);
+let total_page = Math.ceil(50/10);
 
 function render_pagination_button(total_page) {
   pagination_button_wrapper.innerHTML = `
@@ -148,7 +143,7 @@ function render_pagination_button(total_page) {
       let page_number = event.target.dataset.id;
       // console.log(event);
       console.log(page_number);
-      fetch_protein_data(page_number,8);
+      fetch_protein_data(page_number,10);
     })
   } 
 }
