@@ -60,7 +60,7 @@
 
             // Delete from cart
             
-            let CartBaseURL = `https://lame-hammer-server4.onrender.com/cartItem`;
+            let CartBaseURL = `https://lame-hammer-server3.onrender.com/cartItem`;
 
             async function getCartData() {
                 try {
@@ -82,7 +82,7 @@
 
             async function placedOrder(item) {
                 try {
-                    let res = await fetch(`https://lame-hammer-server4.onrender.com/order`, {
+                    let res = await fetch(`https://lame-hammer-server3.onrender.com/order`, {
                         method: "POST",
                         headers: {
                             "Content-Type" : "application/json"

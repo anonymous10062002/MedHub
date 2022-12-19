@@ -1,34 +1,41 @@
-*{
+* {
     margin: 0;
     font-family: sans-serif;
     /* background-color: #f6f6f6; */
 }
 
-#carousel_div{
+#carousel_div {
     /* border: 1px solid black; */
     margin-top: 20px;
     display: flex;
     width: 100%;
-    height: 30vh;
+    height: 300px;
     margin-bottom: 5vh;
 }
-#carousel_div img{
+
+#carousel_div img {
     height: 100%;
+
 }
-#care_plan{
-    border: 1px solid;
+
+#slider_image {
+    width: 100%;
+}
+
+#care_plan {
     width: 95%;
     /* margin-top: 50vh; */
     margin: auto;
 }
-#care_plan img{
-    /* border: 1px solid; */
+
+#care_plan img {
+
     width: 100%;
     margin: auto;
 }
 
 /* CSS for Hard coded data starts */
-.category_div{
+.category_div {
     /* border: 1px solid; */
     height: 28vh;
     display: grid;
@@ -39,113 +46,168 @@
     background-color: #fff;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
-.category_div img{
+
+.category_div img {
     width: 8vw;
 }
 
-.img_div{
+.img_div {
     background-color: #fff;
     display: flex;
     flex-direction: column;
     line-height: 5vh;
     font-size: 13px;
 }
-.category_div div{
+
+.category_div div {
     /* border: 1px solid; */
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
     border-radius: 5%;
-    
+
 }
-.img_div:hover{
+
+.img_div:hover {
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
+
 /* CSS for Hard coded data ends */
 
 /* .dyn_category_div */
 
-h3{
+h3 {
     font-size: 20px;
     margin: 20px;
 }
+
 /* CSS for Dynami data starts */
 /* Dynamic Data styling */
 
-.card_list_wrapper{
-    padding: 0 2vw;
+.card_list_wrapper {
+
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    /* border: 1px solid; */
+    height: 350px;
+
 }
 
-.card_list{
-    /* border: 1px solid red; */
+.card_list {
+
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(1, 52vh);
+    grid-template-rows: repeat(1, 300px);
     margin-bottom: 50px;
+    height: 90%;
+
 }
-.card{
+
+.card {
     border-radius: 10px;
-    padding: 2vh 1vw;
+    padding: 10px;
+    height: 90%;
 }
-.card:hover{
+
+
+.card:hover {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 6px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     cursor: pointer;
 }
-.card_img_div{
-    margin-bottom: 5vh;
+
+.card_img_div {
+
     height: 60%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.card_body{
+
+.card_body {
     /* border: 1px solid; */
     line-height: 3vh;
 }
-.card_name{
+
+.card_name {
     font-size: 15px;
 }
-.card img{
+
+.card img {
     max-height: 100%;
     max-width: 100%;
 }
-.pack_size{
+
+.pack_size {
     color: gray;
 }
-.striked_price{
+
+.striked_price {
     font-size: 12px;
     color: gray;
 }
-.price_and_add_button{
+
+.price_and_add_button {
     /* border: 1px solid; */
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.add_button{
-    height: 3vh;
+
+.add_button {
+    height: 30px;
+    width: 80px;
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 4px;
+    font-size: 14px;
+    height: 30px;
+    padding: 0px 15px;
+    text-shadow: rgb(0 0 0 / 25%) 0px 3px 8px;
+    background: linear-gradient(92.88deg, rgb(69, 94, 181) 9.16%, rgb(86, 67, 204) 43.89%, rgb(103, 63, 215) 64.72%);
+    transition: all 0.5s ease 0s;
+
+
+
 }
-.price{
+
+.add_button:hover {
+    box-shadow: rgb(80 63 205 / 50%) 0px 1px 40px;
+    transition: all 0.1s ease 0s;
+}
+
+
+.price {
     font-size: 20px;
-    color: green;
 }
 
 /* Medium Size Screens */
 
+
 @media screen and (max-width: 800px) {
-    .card_list{
+    .card_list {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, 45vh);
+        grid-template-rows: repeat(2, 200px);
+        gap: 20px;
+
     }
+
+    .card_list_wrapper {
+        height: 500px;
+    }
+
 }
 
-/* lower body */
-#lower_body{
-    /* margin-top: 50px;
+
+
+
+/* 
+lower body
+#lower_body {
+    margin-top: 50px;
     height: 200px;
-    background-color: white; */
-}
+    background-color: white;
+} */

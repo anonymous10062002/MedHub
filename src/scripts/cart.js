@@ -7,14 +7,27 @@
 import { compNav } from "../components/compNav.js";
 let navbar_div = document.getElementById('navbar_div');
 navbar_div.innerHTML = compNav();
+import { compSideNav } from "../components/CompsideNav.js";
+let bd = window.addEventListener("resize", myfun)
+function myfun(event) {
+  let s = event.target.outerWidth;
+  if (s <= 1000) {
+    navbar_div.innerHTML = null;
+    navbar_div.innerHTML = compSideNav();
+  }
+  if (s > 1000) {
+    navbar_div.innerHTML = null;
+    navbar_div.innerHTML = compNav();
+  }
 
+}
 // importing footer here
 import { footerComp } from "../components/compFooter.js";
 let footer_div = document.getElementById('footer_div');
 footer_div.innerHTML = footerComp();
 
 
-let CartBaseURL = "https://lame-hammer-server4.onrender.com/cartItem";
+let CartBaseURL = "https://lame-hammer-server3.onrender.com/cartItem";
 let flag = true;
 
 async function getCartData() {
@@ -76,14 +89,14 @@ function getData(data) {
         </div>
     </div>
     <div class="product_btn">
-        <button class="delete_btn" data-id = ${dataId}><img src="https://img.1mg.com/images/delete_icon.svg" alt="Remove"></button>
+        <button class="delete_btn placeicon" data-id = ${dataId}> &#xf2ed</button>
         <p><button>-</button> 1 <button>+</button></p>
     </div>
 </div>
   `
   }
 }
-
+{/* <img src="https://img.1mg.com/images/delete_icon.svg" alt="Remove"></img> */ }
 function priceDetails(data) {
 
   let shipping_fee = 0;
@@ -116,10 +129,10 @@ function priceDetails(data) {
 
 let checkout_btn = document.querySelector("#checkout_btn")
 checkout_btn.addEventListener("click", (e) => {
-  if(flag){
+  if (flag) {
     location.href = "payment.html"
-  } 
-  else{
+  }
+  else {
     alert("Your cart is empty...")
   }
 })

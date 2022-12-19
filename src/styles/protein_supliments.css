@@ -1,40 +1,54 @@
-*{
+* {
     font-family: sans-serif;
 }
-#wrapper{
-    background-color: #f6f6f6 ;
+
+#wrapper {
+    background-color: #f6f6f6;
     display: flex;
-    border: 1px solid;
+
     padding: 0 2vw;
     column-gap: 2vw;
-    
+
 }
-#sorting_categories{
+
+#sorting_categories {
     border: 1px solid;
     flex: 1.5;
     background-color: white;
 }
-#main_body{
+
+#main_body {
     /* border: 1px solid; */
     flex: 8.5;
 }
-#banners img{
+
+#main_body h1 {
+    color: #0070f3;
+}
+
+#banners img {
     width: 100%;
     margin-bottom: 1vh;
 }
 
-#sub_heading_and_sort{
+#sub_heading_and_sort {
     display: flex;
     padding: 0 4vw;
     justify-content: space-between;
     padding: 2vh 0;
 }
-#sort{
+
+#sub_heading_and_sort h2 {
+    color: #0070f3;
+}
+
+#sort {
     display: flex;
     align-items: center;
     column-gap: 1vw;
 }
-select{
+
+select {
     height: 4vh;
     width: 15vw;
 }
@@ -42,13 +56,9 @@ select{
 /* CSS for Dynamic data starts */
 /* Dynamic Data styling */
 
-.card_list_wrapper{
-    /* padding: 0 2vw; */
-    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
-    /* border: 1px solid; */
-}
 
-.card_list{
+
+.card_list {
     /* border: 1px solid red; */
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -56,17 +66,20 @@ select{
     gap: 2vw;
     margin-bottom: 50px;
 }
-.card{
+
+.card {
     /* border: 1px solid; */
     border-radius: 10px;
     background-color: #fff;
     padding: 0vh 1vw;
 }
-.card:hover{
+
+.card:hover {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 6px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     cursor: pointer;
 }
-.card_img_div{
+
+.card_img_div {
     /* border: 1px solid; */
     margin-bottom: 2vh;
     height: 60%;
@@ -74,34 +87,62 @@ select{
     align-items: center;
     justify-content: center;
 }
-.card_body{
+
+.card_body {
     /* border: 1px solid; */
     line-height: 1vh;
 }
-.card_name{
+
+.card_name {
     font-size: 15px;
     line-height: 3vh;
 }
-.card img{
+
+.card img {
     max-height: 80%;
     max-width: 80%;
 }
-.pack_size{
+
+.pack_size {
     color: gray;
 }
-.striked_price{
+
+.striked_price {
     font-size: 12px;
     color: gray;
 }
-.price_and_add_button{
+
+.price_and_add_button {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.add_button{
+
+.add_button {
     height: 4vh;
+    width: 80px;
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 4px;
+    font-size: 14px;
+    height: 30px;
+    padding: 0px 15px;
+    text-shadow: rgb(0 0 0 / 25%) 0px 3px 8px;
+    background: linear-gradient(92.88deg, rgb(69, 94, 181) 9.16%, rgb(86, 67, 204) 43.89%, rgb(103, 63, 215) 64.72%);
+    transition: all 0.5s ease 0s;
+
 }
-.price{
+
+.add_button:hover {
+    box-shadow: rgb(80 63 205 / 50%) 0px 1px 40px;
+    transition: all 0.1s ease 0s;
+}
+
+.price {
     font-size: 20px;
     color: green;
 }
@@ -109,7 +150,7 @@ select{
 /* Responsiveness */
 
 @media screen and (max-width:900px) {
-    .card_list{
+    .card_list {
         /* border: 1px solid red; */
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -118,37 +159,10 @@ select{
 }
 
 @media screen and (max-width:700px) {
-    .card_list{
+    .card_list {
         /* border: 1px solid red; */
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(4, 52vh);
     }
 }
-
-
-/* =========== */
-
-/* pagination section */
-#pagination_button_wrapper {
-    /* border: 1px dashed #e1e1e1;
-    border-radius: 4px; */
-    margin: 16px auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 16px;
-    width: 80%;
-  }
-  
-  #pagination_button_wrapper button {
-    background: none;
-    border: none;
-    margin: 0px 2px;
-  }
-  
-  #pagination_button_wrapper button:hover{
-    cursor: pointer;
-    color: red;
-  }

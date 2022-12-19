@@ -1,7 +1,5 @@
-
 export function compNav() {
     return `
-
     <div id="nav">
         <div id="upperPartNav">
             <div id="plans"> <a href="index.html"><img src="./src/images/logo.png" alt="logo image"></a>
@@ -12,7 +10,6 @@ export function compNav() {
                 <p>AYURVEDA</p>
                 <p>CARE PLAN</p>
             </div>
-
             <div id="pages">
                 <a href="./login.html">Login|Sign Up</a>
                 <a href="./offers.html">Offers</a>
@@ -35,8 +32,8 @@ export function compNav() {
                     <option>Kanpur</option>
                 </select>
                 <div id="searchBar">
-                    <input type="text" placeholder="Search for Medicines and Health Products">
-                    <button class="placeicon">&#xf002;</button>
+                    <input id="srch"  type="text" placeholder="Search for Medicines and Health Products">
+                    <button id="srchbtn" class="placeicon">&#xf002;</button>
                 </div>
             </div>
             <div id="quickOrder">
@@ -47,7 +44,6 @@ export function compNav() {
         <div id="lowerPartNav">
             <!--------------------------------------------------------------------------->
             <div>
-
                 <div id="resorces" class="menu " >Resorces Center</div>
                 <div class="dropDown">
                     <ul>
@@ -73,9 +69,7 @@ export function compNav() {
                         <li>Kids Nutrition (2-15 Yrs)</li>
                         <li>Women Nutrition</li>
                         <li>Health Food & Drinks</li>
-
                     </ul>
-
                     <ul>
                         <li><a href="protein_supliments.html">Protein Supplements</a></li>
                         <li>Whey Protein</li>
@@ -87,7 +81,6 @@ export function compNav() {
                         <li>Fish Oil</li>
                         <li> Cod Liver Oil</li>
                         <li>Flax Seed Oil</li>
-
                     </ul>
                     <ul>
                         <li> Specialty Supplements</li>
@@ -100,7 +93,6 @@ export function compNav() {
                         <li>Biotin</li>
                         <li>Weight Management</li>
                         <li>Weight Management Herbs</li>
-
                     </ul>
                 </div>
             </div>
@@ -142,7 +134,6 @@ export function compNav() {
                         <li>BP Monitors</li>
                         <li>Oxygen Concentrators & Cans</li>
                         <li>Thermometers</li>
-
                     </ul>
                     <ul>
                         <li>Masks (N95, Surgical and more)</li>
@@ -155,8 +146,6 @@ export function compNav() {
                         <li>Body Massager</li>
                         <li> Diabetes Monitors</li>
                         <li>Mobility Equipments</li>
-
-
                     </ul>
                     <ul>
                         <li> Supports & Braces</li>
@@ -169,12 +158,9 @@ export function compNav() {
                         <li>Cervical Pillows</li>
                         <li>Compression support & sleeves</li>
                         <li>Heel support</li>
-
                     </ul>
                 </div>
-
             </div>
-
             <!--------------------------------------------------------------------------->
             <div>
                 <div id="personal" class="menu Personal1">Personal Care</div>
@@ -190,7 +176,6 @@ export function compNav() {
                         <li>Body Lotions</li>
                         <li>Mosquito Repellents</li>
                         <li>Lip Balm</li>
-
                     </ul>
                     <ul>
                         <li>Baby Care</li>
@@ -203,7 +188,6 @@ export function compNav() {
                         <li>Baby Oral Health</li>
                         <li>Hair Care</li>
                         <li>Shampoo</li>
-
                     </ul>
                     <ul>
                         <li> Elderly Care</li>
@@ -216,7 +200,6 @@ export function compNav() {
                         <li>Women Care Supplements</li>
                         <li>Mother Care</li>
                         <li>Menopause</li>
-
                     </ul>
                     <ul>
                         <li>Men Care</li>
@@ -274,7 +257,6 @@ export function compNav() {
                         <li>Popular categories</li>
                         <li>Herbal Juice</li>
                         <li>Ayurvedic Immunity Boosters</li>
-
                     </ul>
                     <ul>
                         <li> Top Health Concerns</li>
@@ -309,7 +291,6 @@ export function compNav() {
                         <li>Dr Willmar Schwabe India</li>
                         <li> Adel Pekana</li>
                         <li> BJAIN Homeopathy</li>
-
                     </ul>
                 </div>
             </div>

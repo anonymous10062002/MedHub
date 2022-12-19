@@ -1,5 +1,4 @@
-
-const cartURL=`https://lame-hammer-server4.onrender.com/proteins/`;
+const cartURL=`https://lame-hammer-server4.onrender.com/medicines`;
 document.getElementById("logo").addEventListener("click",()=>{
     window.location.assign("admin.html")
 });
@@ -27,7 +26,6 @@ function getCard(data){
                     <div id="right">
                         <h4 id="prodDesc">${item.name}</h4>
                         <p id="des">${item.description}</p>
-
                         <button data-id=${item.id} id="delItem">Delete product</button>
                         <button data-id=${item.id} id="editItem">Edit price</button>
                     </div>
@@ -153,4 +151,3 @@ function pdctDrpDn()
         document.getElementById("productDropDown").style.height="0px";
     }
 }
-

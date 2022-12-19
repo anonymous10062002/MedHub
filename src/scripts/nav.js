@@ -6,7 +6,8 @@ let personal = document.getElementById('personal');
 let health = document.getElementById('health');
 let ayurveda = document.getElementById('ayurveda');
 let homeopathy = document.getElementById('homeopathy');
-
+let searchValue = document.getElementById("srch");
+let searchButton = document.getElementById("srchbtn");
 
 resorces.addEventListener('click', opennav);
 vitamins.addEventListener('click', opennav1);
@@ -16,6 +17,31 @@ personal.addEventListener('click', opennav4);
 health.addEventListener('click', opennav5);
 ayurveda.addEventListener('click', opennav6);
 homeopathy.addEventListener('click', opennav7);
+searchButton.addEventListener("click", srch);
+
+async function srch() {
+    let x = searchValue.value;
+    console.log(x);
+    let res = await fetch("https://lame-hammer-server3.onrender.com/all_data");
+    let data = await res.json();
+    let arr = await data.filter((item) => {
+        return item.name == x || item.category == x;
+    })
+
+    console.log(arr);
+    let c = arr[0].category;
+    if (c == "diseases") {
+        window.location = "./disease.html";
+
+    }
+    else if (c == "medicine") {
+
+        window.location = "./medicine.html";
+    }
+    else {
+        window.location = "./protein_supliments.html";
+    }
+}
 
 
 function opennav() {

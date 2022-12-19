@@ -1,0 +1,109 @@
+.sidenav {
+    position: fixed;
+    background-color: #3B82F6;
+    width: 0px;
+    display: block;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.2s;
+    overflow: hidden;
+}
+
+.sidenav a {
+    margin-top: 30px;
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 20px;
+    color: white;
+}
+
+.sidenav .text {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 30px;
+}
+
+.sidenav1 {
+
+    height: 80px;
+    display: flex;
+    font-size: 30px;
+    align-items: center;
+    padding-left: 25px;
+    background-color: white;
+
+}
+
+.sidenav1 img {
+    height: 80px;
+    padding-left: 10px;
+    margin-top: -10px;
+}
+
+.placeicon {
+    font-family: fontawesome;
+    color: black;
+    display: flex;
+}
+
+#middlePartNav {
+
+    width: 100%;
+    height: 50px;
+    border: 1px solid rgb(234, 229, 229);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+#middlePartNav .openbutton {
+
+    font-size: 30px;
+    padding-left: 25px;
+    display: flex;
+    width: 10%;
+    justify-content: space-between;
+    height: 90%;
+}
+
+#middlePartNav .openbutton img {
+    width: 80px;
+    height: 90%;
+}
+
+
+#searchBar {
+    border: none;
+    width: 50%;
+    height: 90%;
+    background-color: rgb(243, 240, 240);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+
+#searchBar input {
+
+    width: 92%;
+    height: 90%;
+    border: none;
+    background-color: rgb(243, 240, 240);
+    font-size: 20px;
+}
+
+#searchBar button {
+
+    height: 90%;
+    align-items: center;
+    border: none;
+    background-color: white;
+    font-size: 20px;
+    background-color: rgb(243, 240, 240);
+}

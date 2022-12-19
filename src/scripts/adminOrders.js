@@ -1,18 +1,17 @@
-const ordersURL=`http://localhost:3000/cartItem`;
+const users=`https://lame-hammer-server3.onrender.com/order`;
 document.getElementById("logo").addEventListener("click",()=>{
     window.location.assign("admin.html")
-})
-async function recentOrders(){
+});
+(async function recentOrders(){
     try {
-        let orderReq=await fetch(ordersURL);
+        let orderReq=await fetch(users);
         let cartData= await orderReq.json();
         orderReq.ok?console.log(cartData):alert("something went wrong!");
         getCard(cartData);
     } catch (error) {
         console.log(error);
     }
-}
-recentOrders();
+})()
 
 function getCard(data){
     let landing=document.getElementById("landing");
@@ -25,18 +24,8 @@ function getCard(data){
                     <div id="right">
                         <h4 id="prodDesc">${item.name}</h4>
                         <p id="des">${item.description}</p>
-                        <button id="delItem">Delete product</button>
                     </div>
                 </div>`
     })
     landing.innerHTML=xyz.join('');
-}
-function pdctDrpDn()
-{
-    if(document.getElementById("productDropDown").style.height==false ||document.getElementById("productDropDown").style.height=="0px"){
- document.getElementById("productDropDown").style.height="100px";
-    }
-    else{
-        document.getElementById("productDropDown").style.height="0px";
-    }
 }

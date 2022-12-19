@@ -1,29 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
     <link rel="stylesheet" href="./src/styles/signup.css">
+    <link rel="stylesheet" href="./src/styles/sidenav.css">
+    <link rel="stylesheet" href="./src/styles/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
+
 <body>
+    <div id="middlePartNav">
+        <div class="openbutton">
+            <span onclick="opennav()">&#9776;</span>
+            <img src="./src/images/logo.png" alt="logo">
+        </div>
+
+        <!-- <div id="searchBar">
+            <input type="text" placeholder="Search for Medicines and Health Products">
+            <button class="placeicon">&#xf002;</button>
+        </div> -->
+
+    </div>
+
+    <div class="sidenav">
+        <div class="sidenav1">
+            <span onclick="closenav()">&#9776;</span>
+            <img src="./src/images/logo.png" alt="logo">
+        </div>
+
+        <a href="./index.html" class="placeicon">&#xf015; <span class="text">Home</span></a>
+        <a href="./job.html" class="placeicon">&#xf484;<span class="text">Medicines</span> </a>
+        <a href="./job.html" class="placeicon">&#xf7e6; <span class="text">Diseases</span></a>
+        <a href="./job.html" class="placeicon">&#xf07a; <span class="text">Cart</span></a>
+        <a href="#" class="placeicon">&#xf44b; <span class="text">Protein</span></a>
+        <a href="./signup.html" class="placeicon">&#xf039;<span class="text">Register</span> </a>
+        <a href="./login.html" class="placeicon">&#xf2f6;<span class="text">Login</span></a>
+
+
+    </div>
     <div class="container">
         <!-- left div -->
         <div id="left">
             <img id="sliderImage" src="https://www.1mg.com/images/login-signup/Your-Go-To-Health-App.png" alt="">
             <h3 id="sliderHeading">Go To Health App</h3>
-            <p id="sliderPara">Get medicine information, order medicines, book lab tests and consult doctors online from the comfort of your home.</p>
+            <p id="sliderPara">Get medicine information, order medicines, book lab tests and consult doctors online from
+                the comfort of your home.</p>
         </div>
         <!-- right div -->
         <div id="right">
-            <h2 id="head">Sign Up</h2>
+            <h1 id="head">Sign Up</h1>
             <p id="para"> Hey user, Please enter your Username and Password</p>
             <form id="signupForm">
                 <input type="text" id="mobile" placeholder="Enter mobile number" required><br>
                 <input type="text" id="username" placeholder="Enter a username" required><br>
                 <input type="password" id="password" placeholder="Create a password" required><br>
-                <input type="checkbox" id="tick" >
+                <input type="checkbox" id="tick">
                 <label for="tick">Are you a healthcare professional?</label><br>
                 <input type="submit" id="signupBtn" value="SIGN UP">
             </form>
@@ -32,6 +67,16 @@
                 Terms and Conditions & Privacy Policy</p>
         </div>
     </div>
-<script type="module" src="./src/scripts/signup.js"></script>
+    <div id="footer_div"></div>
+    <script type="module" src="./src/scripts/signup.js"></script>
+    <script>
+        let opennav = () => {
+            document.querySelector(".sidenav").style.width = "250px";
+        }
+        let closenav = () => {
+            document.querySelector(".sidenav").style.width = "0px";
+        }
+    </script>
 </body>
+
 </html>
