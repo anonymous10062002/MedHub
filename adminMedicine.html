@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/styles/adminMedicine.css">
+    <title>Admin Medicine</title>
+</head>
+<body>
+    <div id="container">
+        <header id="header">
+            <img id="logo" src="./src/images/logo.png" alt="Medhub">
+            <div id="user"><a href="adminUsers.html">Users</a></div>
+            <div id="product" onclick="pdctDrpDn()">Products
+                <ul id="productDropDown">
+                    <li><a href="./adminMedicine.html">Medicine</a></li>
+                    <li><a href="./adminProteins.html">Protein </a></li>
+                </ul>
+            </div>
+            <div id="order"><a href="adminOrders.html">Orders</a></div>
+        </header>
+        <div id="options">
+            <h2>MedHub - All Medicines</h2>
+            <button id="addBtn">Add new medicine</button>
+        </div>
+        <div id="farm">
+            <form action="" id="fom">
+                <input id="naam" type="text" placeholder="Product name">
+                <input id="photo" type="text" placeholder="Product's image url">
+                <input id="desc" type="text" placeholder="Product description">
+                <input id="price" type="text" placeholder="Product price">
+                <input id="sub" type="submit">
+            </form>
+        </div>
+        <div id="farm2">
+            <form action="" id="fom2">
+                <input id="price2" type="text" placeholder="Product price">
+                <input id="sub2" type="submit">
+            </form>
+        </div>
+        <div id="landing">
+        <!-- API DATA -->
+        </div>
+    </div>
+<script src="./src/scripts/adminMedicine.js"></script>
+</body>
+</html>

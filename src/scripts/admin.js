@@ -1,7 +1,10 @@
-const cartURL=`http://localhost:3000/cartItem`;
+const ordersURL=`http://localhost:3000/cartItem`;
+document.getElementById("logo").addEventListener("click",()=>{
+    window.location.assign("admin.html")
+})
 async function recentOrders(){
     try {
-        let orderReq=await fetch(cartURL);
+        let orderReq=await fetch(ordersURL);
         let cartData= await orderReq.json();
         orderReq.ok?console.log(cartData):alert("something went wrong!");
         getCard(cartData);
@@ -27,4 +30,13 @@ function getCard(data){
                 </div>`
     })
     landing.innerHTML=xyz.join('');
+}
+function pdctDrpDn()
+{
+    if(document.getElementById("productDropDown").style.height==false ||document.getElementById("productDropDown").style.height=="0px"){
+ document.getElementById("productDropDown").style.height="100px";
+    }
+    else{
+        document.getElementById("productDropDown").style.height="0px";
+    }
 }

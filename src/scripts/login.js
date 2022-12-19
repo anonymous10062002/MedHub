@@ -2,18 +2,36 @@
 import { footerComp } from "../components/compFooter.js";
 let footer_div = document.getElementById('footer_div');
 footer_div.innerHTML = footerComp();
-
-    // let storedUsername=localStorage.getItem("username");
-    // let storedPassword=localStorage.getItem("password");
     document.getElementById("loginForm").addEventListener("submit",(event)=>{
         event.preventDefault();
         let entName=document.getElementById("username").value;
         let entPass=document.getElementById("password").value;
         verify(entName,entPass);
     });
+    
     async function verify(entName,entPass){
-        
+        try {
+            let req=await fetch(`https://lame-hammer-server3.onrender.com/users`);
+            let res=await req.json();
+            console.log(res);
+            if(req.ok){
+                res.forEach((item)=>{
+                    if(entName===item.username&&entPass===item.password){
+                        window.location.assign("index.html");
+                    }
+                    else if(entName===item.username&&entPass!==item.password){
+                        alert("wrong password entered!");
+                    }
+                    else if(entName!==item.username&&entPass===item.password){
+                        alert("wrong username entered!");
+                    }
+                })
+            }
+        } catch (error) {
+            console.log(error);
+        }
     }
+
     function first(){
         document.getElementById("sliderImage").src="https://www.1mg.com/images/login-signup/Home-Delivery-of-Medicines.png"
         document.getElementById("sliderHeading").innerText= "Medicines, Home Delivered"

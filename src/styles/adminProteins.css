@@ -1,0 +1,197 @@
+*{
+    margin: 0;  
+}
+#header>div>a{
+    text-decoration: none;
+    color: rgb(0,99,219);
+}
+#header>div{
+    width: 15vw;
+    font-size: x-large;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#farm,#farm2{
+    height: 0px;
+    overflow: hidden;
+    transition: 0.5s;
+    /* border: 1px solid red; */
+}
+#farm2{
+    height: 0px;
+}
+#fom,#fom2{
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+#fom>input{
+    padding: 5px;
+}
+#fom2>input{
+    padding: 5px;
+}
+#price2{
+    width: 50%;
+}
+#naam{
+    width: 15%;
+}
+#photo{
+    width: 32%;
+}
+#desc{
+    width: 32%;
+}
+#price{
+    width: 7%;
+}
+#sub{
+    width: 7%;
+    border: none;
+    color: white;
+    background-color: rgb(217,0,0);
+}
+#header{
+    font-size: large;
+    display: flex;
+    height: 100px;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+    justify-content: space-evenly;
+}
+#logo{
+   height: 100%; 
+   cursor: pointer;
+}
+#options{
+    margin: 20px auto 10px ;
+    border: 1px solid rgba(0, 0, 0, 0.233);
+    padding: 0 20px;
+    height: 80px;
+    width: 78vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+#options>h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(0,99,219);
+}
+#options>button{
+    cursor: pointer;
+    border: 0;
+    color: white;
+    background-color: rgb(0,99,219);
+    border-radius: 10px;
+    padding: 10px 20px 10px 20px;
+    font-size: medium;
+}
+#card{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* border: 2px solid rgb(0, 0, 0); */
+    display: flex;
+    width: 80vw;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin: auto;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+#delItem:hover{
+    background-color: rgb(217,0,0);
+    color: white;
+    cursor: pointer;
+}
+#editItem:hover{
+    background-color: rgb(0,99,219);
+    color: white;
+    cursor: pointer;
+}
+#des{
+    font-size:15px;
+}
+#product{
+    color: rgb(0,99,219);
+}
+#prodDesc{
+    color: rgb(217,0,0);
+    margin-bottom: 15px;
+}
+#productDropDown
+{
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding-top: 10px;
+    color: blue;
+    left: 830px;
+    overflow: hidden;
+    background-color: white;
+    height: 0px;
+    transition: 0.5s;
+}
+#productDropDown li{
+    padding-top: 10px;
+    text-decoration: none;
+    color: blue;
+}
+#editItem{
+    border: 0;
+    border-radius: 5px;
+    padding: 10px 20px 10px 20px;
+    margin-top: 30px;
+}
+#delItem{
+    border: 0;
+    border-radius: 5px;
+    padding: 10px 20px 10px 20px;
+    margin-top: 30px;
+}
+#left{
+    /* border: 2px solid orangered; */
+    width: 15vw;
+    text-align: center;
+}
+#right{
+    /* border: 1px solid blue; */
+    width: 63vw;
+    padding-right: 20px;
+}
+#prodImg{
+    /* border: 1px solid red; */
+    height: 20vh;
+    width: 100%;
+    object-fit: contain;
+}
+
+/* media queries */
+@media screen and (max-width: 650px) {
+    #card{
+        flex-direction: column;
+        align-items: center;
+    }
+    #landing{
+        margin: auto;
+    }
+    #left{
+        width: 70%;
+        padding: 20px;
+    }
+    #right{
+        padding-right: 0;
+        padding: 20px;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 500px) {
+    #user,#product,#order{
+        display: none;
+    }
+}
